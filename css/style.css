@@ -63,6 +63,10 @@ ul {
     text-align: center;
 }
 
+.text-white {
+    color: #ffffff !important;
+}
+
 .text-highlight {
     color: var(--primary-green);
     position: relative;

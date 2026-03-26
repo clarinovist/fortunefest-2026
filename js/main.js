@@ -1,71 +1,59 @@
-/**
- * Fortune Fest - Main JavaScript
- * Handles interactions, navbar states, and scroll reveal animations.
- */
-
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Navbar Sticky State Management
-    const navbar = document.getElementById('navbar');
+// --- Scroll Reveal Animations ---
+function reveal() {
+    var reveals = document.querySelectorAll('.reveal-up');
     
-    const handleScroll = () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+        
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
         }
-    };
+    }
+}
+window.addEventListener('scroll', reveal);
+reveal(); // Trigger on load
 
-    // Attach scroll listener
-    window.addEventListener('scroll', handleScroll);
-    // Init state
-    handleScroll();
+// --- Countdown Timer Logic ---
+const countdownDate = new Date("August 16, 2026 06:00:00").getTime();
 
-    // 2. Scroll Reveal Animations using IntersectionObserver
-    const revealElements = document.querySelectorAll('.reveal-up');
+const timerTick = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    if (distance < 0) {
+        clearInterval(timerTick);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+    }
 
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, revealOptions);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    revealElements.forEach(el => {
-        revealOnScroll.observe(el);
+    // Update DOM (if elements exist)
+    const daysEl = document.getElementById("days");
+    if(daysEl) {
+        daysEl.innerText = days < 10 ? "0" + days : days;
+        document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    }
+}, 1000);
+
+// --- FAQ Accordion Toggles (Optional: to enforce single open) ---
+const details = document.querySelectorAll("details");
+details.forEach((targetDetail) => {
+  targetDetail.addEventListener("click", () => {
+    details.forEach((detail) => {
+      if (detail !== targetDetail) {
+        detail.removeAttribute("open");
+      }
     });
-
-    // 3. Optional: Dynamic Tilt Effect for Glass Panels
-    const tiltElements = document.querySelectorAll('.tilt-effect');
-
-    tiltElements.forEach(el => {
-        el.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left; // x position within the element.
-            const y = e.clientY - rect.top;  // y position within the element.
-            
-            // Calculate rotation values
-            const xRot = 10 * ((y - rect.height / 2) / rect.height);
-            const yRot = -10 * ((x - rect.width / 2) / rect.width);
-            
-            this.style.transform = `perspective(1000px) rotateX(${xRot}deg) rotateY(${yRot}deg) scale3d(1.02, 1.02, 1.02)`;
-        });
-
-        el.addEventListener('mouseleave', function() {
-            this.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
-            this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-
-        el.addEventListener('mouseenter', function() {
-            this.style.transition = 'none'; // remove transition for smooth tracking
-        });
-    });
+  });
 });

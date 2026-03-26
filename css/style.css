@@ -89,6 +89,16 @@ ul {
     background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
 }
 
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-green), #2E8A3C);
+}
+
+.text-highlight-yellow {
+    color: var(--primary-yellow);
+    position: relative;
+    display: inline-block;
+}
+
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -434,9 +444,25 @@ ul {
 }
 
 .details-card {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.85);
+}
+
+.details-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.details-map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .details-info h2 {
@@ -480,6 +506,155 @@ ul {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--text-dark);
+}
+
+/* ==============================
+   Countdown Section
+============================== */
+.countdown-section {
+    padding: 6rem 0;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    min-width: 150px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.countdown-num {
+    display: block;
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==============================
+   Gallery Section
+============================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    aspect-ratio: 4/3;
+    transition: var(--transition-smooth);
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   FAQ Section
+============================== */
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.faq-item[open] {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    position: relative;
+    list-style: none; /* Hide default marker */
+}
+
+.faq-question::-webkit-details-marker {
+    display: none; /* Hide default marker in Webkit */
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-question::after {
+    content: '−';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ==============================
@@ -599,6 +774,16 @@ footer p {
     }
     .info-item .icon { margin-bottom: 0.5rem; }
     .info-item p { font-size: 1.1rem; }
+    
+    .details-flex { grid-template-columns: 1fr; gap: 2rem; }
+    .details-map { min-height: 250px; }
+    
+    /* Countdown, Gallery, FAQ */
+    .countdown-box { min-width: calc(50% - 1rem); padding: 1.5rem 1rem; }
+    .countdown-num { font-size: 3rem; }
+    .countdown-label { font-size: 1rem; }
+    .faq-question { padding: 1.25rem; font-size: 1.05rem; }
+    .faq-question::after { right: 1.25rem; }
     
     /* Footer */
     footer { padding: 2rem 0; text-align: center; }

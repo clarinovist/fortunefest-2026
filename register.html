@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran - Fortune Fest 2026</title>
+    <meta name="description" content="Pendaftaran Peserta Fortune Fest - Rise in Happiness.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" style="opacity: 1; transform: translateY(0); pointer-events: auto;">
+                <img src="Design/INLA INDO GREEN.png" alt="INLA Logo" class="inla-logo" onerror="this.style.display='none'">
+                <span class="nav-brand" style="color: var(--primary-green);">Fortune Fest</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Beranda</a></li>
+                <li><a href="index.html#activities">Kegiatan</a></li>
+                <li><a href="index.html#details">Detail</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Hero / Header -->
+    <header class="form-header bg-primary">
+        <div class="container text-center">
+            <h1 class="text-white fade-in-up">Formulir <span class="text-highlight-yellow">Pendaftaran</span></h1>
+            <p class="text-white fade-in-up delay-1" style="max-width: 600px; margin: 10px auto 0; font-size: 1.1rem; opacity: 0.9;">
+                Lengkapi data diri Anda di bawah ini untuk bergabung merayakan kebahagiaan di Taman Dayu.
+            </p>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="section form-section">
+        <div class="container file-reveal fade-in-up delay-2">
+            <div class="form-wrapper glass-panel">
+                <form action="#" method="POST" id="registrationForm">
+                    
+                    <!-- Section 1: Ticket Type -->
+                    <div class="form-group-section">
+                        <h3 class="form-section-title">Kategori Tiket</h3>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="ticket_category" value="fun_run" id="type_funrun" checked>
+                                <span class="radio-content">
+                                    <span class="rc-title">Peserta 3K+ Fun Run</span>
+                                    <span class="rc-desc">Termasuk Race Pack & Akses Penuh</span>
+                                </span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="ticket_category" value="umum" id="type_umum">
+                                <span class="radio-content">
+                                    <span class="rc-title">Pengunjung Umum</span>
+                                    <span class="rc-desc">Akses Eco Market & Panggung Seni</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <!-- Section 2: Personal Info -->
+                    <div class="form-group-section">
+                        <h3 class="form-section-title">Informasi Pribadi</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullname">Nama Lengkap (Sesuai KTP) <span class="required">*</span></label>
+                                <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Cth: Budi Santoso" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Cth: budi@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="whatsapp">No. WhatsApp <span class="required">*</span></label>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="Cth: 08123456789" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Jenis Kelamin <span class="required">*</span></label>
+                                <select id="gender" name="gender" class="form-select" required>
+                                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                    <option value="L">Laki-Laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Tanggal Lahir <span class="required">*</span></label>
+                                <input type="date" id="dob" name="dob" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="blood_type">Golongan Darah</label>
+                                <select id="blood_type" name="blood_type" class="form-select">
+                                    <option value="" selected>Tidak Tahu / Memilih tidak menjawab</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="AB">AB</option>
+                                    <option value="O">O</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Section: T-Shirt Size (Only for Fun Run) -->
+                    <div id="funrun_extras" class="form-group-section form-transition active">
+                        <div class="form-divider"></div>
+                        <h3 class="form-section-title">Merchandise (Khusus Fun Run)</h3>
+                        <div class="form-group">
+                            <label for="tshirt_size">Ukuran Kaos <span class="required">*</span></label>
+                            <select id="tshirt_size" name="tshirt_size" class="form-select">
+                                <option value="" disabled selected>Pilih Ukuran Kaos</option>
+                                <option value="S">S (Tinggi 66cm x Lebar 48cm)</option>
+                                <option value="M">M (Tinggi 68cm x Lebar 50cm)</option>
+                                <option value="L">L (Tinggi 70cm x Lebar 52cm)</option>
+                                <option value="XL">XL (Tinggi 72cm x Lebar 54cm)</option>
+                                <option value="XXL">XXL (Tinggi 74cm x Lebar 56cm)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <!-- Section 3: Emergency & Safety -->
+                    <div class="form-group-section">
+                        <h3 class="form-section-title">Keamanan & Medis</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="emergency_name">Nama Kontak Darurat <span class="required">*</span></label>
+                                <input type="text" id="emergency_name" name="emergency_name" class="form-control" placeholder="Nama keluarga atau teman dekat" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency_phone">No. HP Kontak Darurat <span class="required">*</span></label>
+                                <input type="tel" id="emergency_phone" name="emergency_phone" class="form-control" placeholder="Nomor yg bisa dihubungi saat darurat" required>
+                            </div>
+                            <div class="form-group" style="grid-column: 1 / -1;">
+                                <label for="medical_history">Riwayat Penyakit (Opsional)</label>
+                                <textarea id="medical_history" name="medical_history" class="form-control" rows="3" placeholder="Sebutkan jika Anda memiliki riwayat penyakit tertentu (Asma, Jantung, dll)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <!-- Terms & Submit -->
+                    <div class="form-group-section">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            <span class="terms-text">Saya menyetujui seluruh <a href="#" class="text-highlight">Syarat dan Ketentuan</a> acara Fortune Fest 2026, dan menyatakan dalam kondisi fisik yang sehat untuk mengikuti aktivitas yang saya pilih.</span>
+                        </label>
+                        
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn btn-primary submit-btn">Selesaikan Pendaftaran</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <img src="Design/logo fortune fest.png" alt="Fortune Fest" class="footer-logo">
+            <p>&copy; 2026 INLA Indonesia - Fortune Fest: Rise in Happiness. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Form JS Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const radFunRun = document.getElementById('type_funrun');
+            const radUmum = document.getElementById('type_umum');
+            const funRunExtras = document.getElementById('funrun_extras');
+            const tshirtSelect = document.getElementById('tshirt_size');
+
+            function updateFormDisplay() {
+                if (radFunRun.checked) {
+                    funRunExtras.classList.add('active');
+                    tshirtSelect.setAttribute('required', 'required');
+                } else {
+                    funRunExtras.classList.remove('active');
+                    tshirtSelect.removeAttribute('required');
+                }
+            }
+
+            radFunRun.addEventListener('change', updateFormDisplay);
+            radUmum.addEventListener('change', updateFormDisplay);
+        });
+    </script>
+</body>
+</html>

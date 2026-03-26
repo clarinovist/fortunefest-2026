@@ -543,10 +543,64 @@ footer p {
    Responsive Queries
 ============================== */
 @media (max-width: 768px) {
-    .hero-title { font-size: 2.2rem; }
-    .hero-subtitle { font-size: 1.1rem; }
+    /* Hero Section */
+    .hero { padding: 120px 15px 60px; }
+    .hero-title { font-size: 2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-cta { flex-direction: column; width: 100%; gap: 1rem; }
+    .hero-cta .btn { width: 100%; text-align: center; }
+    
+    /* Navigation */
+    .navbar { padding: 10px 0; }
     .nav-links { display: none; } /* Simplified for mobile out-of-box */
-    .hero-cta { flex-direction: column; }
+    
+    /* Global Sections */
     .section { padding: 4rem 0; }
-    .section-title { font-size: 2rem; }
+    .section-title { font-size: 1.8rem; }
+    
+    /* About Section */
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-overlay {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        padding: 0 15px;
+        margin-top: -60px; /* Overlap image slightly */
+        width: 100%;
+    }
+    .about-text {
+        padding: 2rem 1.5rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    /* Activities Section */
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .activity-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Details Section */
+    .details-info h2 { font-size: 1.8rem; }
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+    }
+    .info-item .icon { margin-bottom: 0.5rem; }
+    .info-item p { font-size: 1.1rem; }
+    
+    /* Footer */
+    footer { padding: 2rem 0; text-align: center; }
+    .footer-logo { margin: 0 auto 1.5rem; }
 }

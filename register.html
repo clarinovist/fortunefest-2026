@@ -203,26 +203,9 @@
             // PANDUAN INTEGRASI GOOGLE FORM:
             // 1. Buat Google Form dengan pertanyaan yang sesuai dengan form ini.
             // 2. Dapatkan URL Action Google Form (Inspect element di Google Form -> cari <form action="...">)
-            // 3. Dapatkan Name / Entry ID masing-masing input (Inspect element -> cari name="entry.1234567")
-            // 4. Ubah variabel di bawah ini sesuai dengan data dari Google Form Anda.
-
-            const GOOGLE_FORM_URL = 'YOUR_GOOGLE_FORM_ACTION_URL_HERE'; 
+            // URL Web App dari Google Apps Script
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDTFj9KYiHJ3_wF33jzVAi4hdEr2Yym0OdOTETTRsCkusHmB-KMoXXBsf5zy2Hu-7O2Q/exec'; 
             
-            // Pemetaan ID Input HTML ke Entry ID Google Form
-            const GOOGLE_FORM_ENTRIES = {
-                ticket_category: 'entry.000000000', // Ganti dengan entry ID Kategori Tiket
-                fullname: 'entry.111111111',       // Ganti dengan entry ID Nama Lengkap
-                email: 'entry.222222222',          // Ganti dengan entry ID Email
-                whatsapp: 'entry.333333333',       // Ganti dengan entry ID WhatsApp
-                gender: 'entry.444444444',         // Ganti dengan entry ID Jenis Kelamin
-                dob: 'entry.555555555',            // Ganti dengan entry ID Tanggal Lahir
-                blood_type: 'entry.666666666',     // Ganti dengan entry ID Golongan Darah
-                tshirt_size: 'entry.777777777',    // Ganti dengan entry ID Ukuran Kaos
-                emergency_name: 'entry.888888888', // Ganti dengan entry ID Nama Darurat
-                emergency_phone: 'entry.999999999',// Ganti dengan entry ID Nomor Darurat
-                medical_history: 'entry.101010101' // Ganti dengan entry ID Riwayat Medis
-            };
-
             const registrationForm = document.getElementById('registrationForm');
             const submitBtn = document.querySelector('.submit-btn');
 
@@ -235,40 +218,32 @@
                 submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.7';
 
-                // Jika URL masih default, simulasikan pendaftaran berhasil (Sebagai testing)
-                if(GOOGLE_FORM_URL === 'YOUR_GOOGLE_FORM_ACTION_URL_HERE') {
-                    setTimeout(() => {
-                        window.location.href = 'success.html';
-                    }, 1000);
-                    return;
-                }
-
-                // Jika URL sudah diisi, kirim data via fetch (AJAX Mode no-cors)
-                const formData = new FormData();
+                // Siapkan data form
+                const formData = new FormData(registrationForm);
                 
-                // Ambil nilai Kategori Tiket (Radio Button)
+                // Jika ingin mengirim data manual berdasarkan key yang sesuai dengan GAS
+                const payload = new FormData();
                 const ticketCat = document.querySelector('input[name="ticket_category"]:checked');
-                if(ticketCat) formData.append(GOOGLE_FORM_ENTRIES.ticket_category, ticketCat.value);
-
-                // Ambil nilai input lainnya
-                const inputIDs = ['fullname', 'email', 'whatsapp', 'gender', 'dob', 'blood_type', 'tshirt_size', 'emergency_name', 'emergency_phone', 'medical_history'];
-                inputIDs.forEach(id => {
-                    const input = document.getElementById(id);
-                    if (input && input.value) {
-                        formData.append(GOOGLE_FORM_ENTRIES[id], input.value);
+                if(ticketCat) payload.append('ticket_category', ticketCat.value);
+                
+                const inputs = ['fullname', 'email', 'whatsapp', 'gender', 'dob', 'blood_type', 'tshirt_size', 'emergency_name', 'emergency_phone', 'medical_history'];
+                inputs.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el && el.value) {
+                        payload.append(id, el.value);
                     }
                 });
 
-                fetch(GOOGLE_FORM_URL, {
+                fetch(SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors', // Penting agar tidak kena blokir CORS policy
-                    body: formData
-                }).then(() => {
+                    body: payload
+                }).then(response => response.text())
+                .then(result => {
                     // Berhasil dikirim, arahkan ke halaman sukses
                     window.location.href = 'success.html';
                 }).catch(err => {
                     alert('Terjadi kesalahan saat menghubungi server pendaftaran. Silakan coba lagi.');
-                    console.error(err);
+                    console.error('Error:', err);
                     submitBtn.innerText = originalBtnText;
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '1';

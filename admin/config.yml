@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: clarinovist/fortunefest-2026
+  branch: main
+  
+media_folder: "Design"
+public_folder: "Design"
+
+collections:
+  - name: "home"
+    label: "Beranda Website"
+    file: "data/home.json"
+    fields:
+      - {label: "Judul Utama Hero", name: "hero_title", widget: "string"}
+      - {label: "Subjudul Hero", name: "hero_subtitle", widget: "text"}
+      
+      - {label: "Angka Target Pelari", name: "stat_1", widget: "number"}
+      - {label: "Angka Tenan", name: "stat_2", widget: "number"}
+      - {label: "Angka Partner & Sponsor", name: "stat_3", widget: "number"}
+      
+      - {label: "Judul Singkat Tentang", name: "about_title", widget: "string"}
+      - {label: "Teks Penjelasan Tentang", name: "about_desc", widget: "text"}

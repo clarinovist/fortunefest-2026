@@ -1,0 +1,54 @@
+{
+    "name": "Fortune Fest 2026 - Rise in Happiness",
+    "short_name": "Fortune Fest",
+    "description": "Festival kebahagiaan terbesar di Taman Dayu. Fun Run, Eco Market, dan Pertunjukan Seni.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#37A248",
+    "theme_color": "#37A248",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "id",
+    "categories": ["events", "lifestyle"],
+    "icons": [
+        {
+            "src": "Design/logo fortune fest.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "Design/logo fortune fest.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "Design/cover.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Fortune Fest 2026"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Daftar Fun Run",
+            "short_name": "Daftar",
+            "description": "Daftar sebagai peserta 3K+ Family Fun Run",
+            "url": "/register.html",
+            "icons": [{ "src": "Design/logo fortune fest.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Lihat Detail",
+            "short_name": "Detail",
+            "description": "Lihat detail acara Fortune Fest",
+            "url": "/#details",
+            "icons": [{ "src": "Design/logo fortune fest.png", "sizes": "96x96" }]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

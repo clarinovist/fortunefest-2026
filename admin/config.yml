@@ -23,3 +23,29 @@ collections:
           
           - {label: "Judul Singkat Tentang", name: "about_title", widget: "string"}
           - {label: "Teks Penjelasan Tentang", name: "about_desc", widget: "text"}
+          
+          - label: "Rangkaian Acara Utama"
+            name: "activities"
+            widget: "list"
+            fields:
+              - {label: "Judul Acara", name: "title", widget: "string"}
+              - {label: "Ikon SVG", name: "icon_svg", widget: "text"}
+              - {label: "Poin Fitur Utama", name: "features", widget: "list", field: {label: "Fitur", name: "feature", widget: "string"}}
+              - {label: "Teks Tombol (opsional)", name: "link_text", widget: "string", required: false}
+              - {label: "Link Tombol (opsional)", name: "link_url", widget: "string", required: false}
+
+          - label: "Testimoni"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Kutipan Testimoni", name: "text", widget: "text"}
+              - {label: "Inisial / Avatar", name: "author_initials", widget: "string"}
+              - {label: "Nama Penulis", name: "author_name", widget: "string"}
+              - {label: "Peran / Identitas", name: "author_role", widget: "string"}
+
+          - label: "Pertanyaan Umum (FAQ)"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - {label: "Pertanyaan", name: "question", widget: "string"}
+              - {label: "Jawaban (HTML format)", name: "answer", widget: "text"}

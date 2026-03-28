@@ -58,16 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // 3. FAQ Accordion Toggles
     // ==========================================
-    const details = document.querySelectorAll("details");
-    details.forEach((targetDetail) => {
-        targetDetail.addEventListener("click", () => {
-            details.forEach((detail) => {
-                if (detail !== targetDetail) {
-                    detail.removeAttribute("open");
-                }
+    window.initFAQs = function() {
+        const details = document.querySelectorAll("details.faq-item");
+        details.forEach((targetDetail) => {
+            // Remove old listener if re-initializing
+            const newDetail = targetDetail.cloneNode(true);
+            targetDetail.parentNode.replaceChild(newDetail, targetDetail);
+            
+            newDetail.addEventListener("click", () => {
+                document.querySelectorAll("details.faq-item").forEach((detail) => {
+                    if (detail !== newDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
             });
         });
-    });
+    };
+    window.initFAQs();
 
     // ==========================================
     // 4. Navbar Scroll Effect
@@ -170,40 +177,55 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // 8. Testimonials Slider
     // ==========================================
-    const testimonialTrack = document.getElementById('testimonialTrack');
-    const testimonialPrev = document.getElementById('testimonialPrev');
-    const testimonialNext = document.getElementById('testimonialNext');
-    
-    if (testimonialTrack) {
-        let currentSlide = 0;
-        const slides = testimonialTrack.querySelectorAll('.testimonial-card');
-        const slideCount = slides.length;
+    window.initTestimonialSlider = function() {
+        const testimonialTrack = document.getElementById('testimonialTrack');
+        const testimonialPrev = document.getElementById('testimonialPrev');
+        const testimonialNext = document.getElementById('testimonialNext');
+        
+        // Ensure we clean up old interval if re-initialized
+        if(window.testimonialInterval) clearInterval(window.testimonialInterval);
 
-        function updateSlider() {
-            const slideWidth = 100 / slideCount;
-            testimonialTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
-        }
+        if (testimonialTrack) {
+            let currentSlide = 0;
+            const slides = testimonialTrack.querySelectorAll('.testimonial-card');
+            const slideCount = slides.length;
+            
+            if (slideCount === 0) return;
 
-        if (testimonialPrev) {
-            testimonialPrev.addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-                updateSlider();
-            });
-        }
+            function updateSlider() {
+                const slideWidth = 100 / (slideCount || 1);
+                testimonialTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            }
 
-        if (testimonialNext) {
-            testimonialNext.addEventListener('click', () => {
+            if (testimonialPrev) {
+                // clone to remove old listeners
+                const newPrev = testimonialPrev.cloneNode(true);
+                if(testimonialPrev.parentNode) testimonialPrev.parentNode.replaceChild(newPrev, testimonialPrev);
+                
+                newPrev.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                    updateSlider();
+                });
+            }
+
+            if (testimonialNext) {
+                const newNext = testimonialNext.cloneNode(true);
+                if(testimonialNext.parentNode) testimonialNext.parentNode.replaceChild(newNext, testimonialNext);
+
+                newNext.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % slideCount;
+                    updateSlider();
+                });
+            }
+
+            // Auto-slide every 5 seconds
+            window.testimonialInterval = setInterval(() => {
                 currentSlide = (currentSlide + 1) % slideCount;
                 updateSlider();
-            });
+            }, 5000);
         }
-
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % slideCount;
-            updateSlider();
-        }, 5000);
-    }
+    };
+    window.initTestimonialSlider();
 
     // ==========================================
     // 9. Gallery Lightbox

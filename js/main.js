@@ -230,23 +230,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // 9. Gallery Lightbox
     // ==========================================
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxClose = document.getElementById('lightboxClose');
+    window.initGalleryLightbox = function() {
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const imgSrc = item.getAttribute('data-src') || item.querySelector('.gallery-placeholder').style.backgroundImage;
-            lightboxImage.src = imgSrc;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
+        // Remove old listeners to prevent duplicates if called multiple times
+        galleryItems.forEach(item => {
+            const new_element = item.cloneNode(true);
+            if (item.parentNode) item.parentNode.replaceChild(new_element, item);
         });
-    });
 
-    if (lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-    }
+        const newGalleryItems = document.querySelectorAll('.gallery-item');
+        newGalleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                let imgSrc = item.getAttribute('data-src');
+                if (!imgSrc) {
+                    const placeholder = item.querySelector('.gallery-placeholder');
+                    if (placeholder) {
+                        imgSrc = placeholder.style.backgroundImage;
+                    }
+                }
+                
+                if (imgSrc) {
+                    lightboxImage.src = imgSrc;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        if (lightboxClose) {
+            lightboxClose.replaceWith(lightboxClose.cloneNode(true));
+            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        }
+    };
+    
+    // Call on load
+    window.initGalleryLightbox();
 
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {

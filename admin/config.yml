@@ -43,6 +43,20 @@ collections:
               - {label: "Nama Penulis", name: "author_name", widget: "string"}
               - {label: "Peran / Identitas", name: "author_role", widget: "string"}
 
+          - label: "Sponsor & Media Partner"
+            name: "sponsors"
+            widget: "list"
+            fields:
+              - {label: "Nama / Instansi", name: "name", widget: "string"}
+              - {label: "Logo", name: "image", widget: "image", required: false}
+
+          - label: "Galeri Momen Kebahagiaan"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto / Gambar", name: "image", widget: "image"}
+              - {label: "Keterangan Foto (Caption)", name: "caption", widget: "string", required: false}
+
           - label: "Pertanyaan Umum (FAQ)"
             name: "faqs"
             widget: "list"

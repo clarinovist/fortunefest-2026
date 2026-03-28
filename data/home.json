@@ -61,6 +61,19 @@
       "author_role": "Vegan Activist"
     }
   ],
+  "sponsors": [
+    { "name": "INLA Indonesia", "image": "" },
+    { "name": "Sponsor 1", "image": "" },
+    { "name": "Sponsor 2", "image": "" },
+    { "name": "Media Partner", "image": "" },
+    { "name": "Vegan Indonesia", "image": "" }
+  ],
+  "gallery": [
+    { "image": "Design/running.jpeg", "caption": "3K+ Family Fun Run" },
+    { "image": "Design/ending.png", "caption": "Loving Nature Arts Stage" },
+    { "image": "Design/super.png", "caption": "Plantbased Eco Market" },
+    { "image": "Design/cover.png", "caption": "Kebersamaan Keluarga" }
+  ],
   "faqs": [
     {
       "question": "Kapan dan dimana acara ini diselenggarakan?",

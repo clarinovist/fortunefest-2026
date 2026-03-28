@@ -555,10 +555,19 @@
     </script>
     <!-- CMS Fetching Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('data/home.json')
-                .then(response => response.json())
-                .then(data => {
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const [heroRes, kegiatanRes, komunitasRes, infoRes] = await Promise.all([
+                    fetch('data/hero.json').catch(() => ({ json: () => ({}) })),
+                    fetch('data/kegiatan.json').catch(() => ({ json: () => ({}) })),
+                    fetch('data/komunitas.json').catch(() => ({ json: () => ({}) })),
+                    fetch('data/info.json').catch(() => ({ json: () => ({}) }))
+                ]);
+                const heroData = await (heroRes.ok ? heroRes.json() : Promise.resolve({}));
+                const kegiatanData = await (kegiatanRes.ok ? kegiatanRes.json() : Promise.resolve({}));
+                const komunitasData = await (komunitasRes.ok ? komunitasRes.json() : Promise.resolve({}));
+                const infoData = await (infoRes.ok ? infoRes.json() : Promise.resolve({}));
+                const data = { ...heroData, ...kegiatanData, ...komunitasData, ...infoData };
                     // Update Text Details
                     if(data.hero_title) document.getElementById('cms-hero-title').innerHTML = data.hero_title;
                     if(data.hero_subtitle) document.getElementById('cms-hero-subtitle').innerHTML = marked.parseInline(data.hero_subtitle);
@@ -676,8 +685,9 @@
                     if(window.initTestimonialSlider) window.initTestimonialSlider();
                     if(window.initFAQs) window.initFAQs();
                     if(window.initGalleryLightbox) window.initGalleryLightbox();
-                })
-                .catch(err => console.log("CMS Data not found or error fetching", err));
+            } catch (err) {
+                console.log("CMS Data not found or error fetching", err);
+            }
         });
     </script>
 </body>

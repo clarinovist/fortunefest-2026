@@ -1,0 +1,31 @@
+{
+  "sponsors": [
+    { "name": "INLA Indonesia", "image": "" },
+    { "name": "Sponsor 1", "image": "" },
+    { "name": "Sponsor 2", "image": "" },
+    { "name": "Media Partner", "image": "" },
+    { "name": "Vegan Indonesia", "image": "" }
+  ],
+  "faqs": [
+    {
+      "question": "Kapan dan dimana acara ini diselenggarakan?",
+      "answer": "Fortune Fest 2026 akan diselenggarakan pada hari Minggu, 16 Agustus 2026 mulai pukul 06:00 WIB di Taman Dayu."
+    },
+    {
+      "question": "Bagaimana cara mendaftar kegiatan Fun Run?",
+      "answer": "Pendaftaran Fun Run dapat dilakukan melalui tautan [Daftar Sekarang](register.html) di atas. Ikuti petunjuk pengisian form dan selesaikan administrasi untuk mendapatkan Race Pack Anda."
+    },
+    {
+      "question": "Apakah acara ini gratis atau berbayar?",
+      "answer": "Acara utama seperti Eco Market dan Panggung Kesenian terbuka untuk umum secara gratis. Namun, untuk 3K+ Family Fun Run mungkin dikenakan biaya pendaftaran untuk donasi dan Race Pack."
+    },
+    {
+      "question": "Fasilitas apa saja yang disediakan di lokasi?",
+      "answer": "Kami menyediakan area parkir yang luas, toilet bersih, tim medis yang siaga, dan zona istirahat yang nyaman bagi seluruh peserta keluarga."
+    },
+    {
+      "question": "Apakah bisa datang dengan kendaraan umum?",
+      "answer": "Ya, Taman Dayu dapat diakses dengan kendaraan umum. Kami juga menyediakan shuttle bus dari beberapa titik penjemputan di Pandaan dan sekitar."
+    }
+  ]
+}

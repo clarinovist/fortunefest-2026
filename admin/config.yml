@@ -10,20 +10,22 @@ collections:
   - name: "pages"
     label: "Pengaturan Halaman"
     files:
-      - name: "home"
-        label: "Beranda Website"
-        file: "data/home.json"
+      - name: "home_hero"
+        label: "Beranda: Info Utama & Angka"
+        file: "data/hero.json"
         fields:
           - {label: "Judul Utama Hero", name: "hero_title", widget: "string"}
           - {label: "Subjudul Hero", name: "hero_subtitle", widget: "markdown", buttons: ["bold", "italic", "link"]}
-          
           - {label: "Angka Target Pelari", name: "stat_1", widget: "number"}
           - {label: "Angka Tenan", name: "stat_2", widget: "number"}
           - {label: "Angka Partner & Sponsor", name: "stat_3", widget: "number"}
-          
           - {label: "Judul Singkat Tentang", name: "about_title", widget: "markdown", buttons: ["bold", "italic", "link"]}
           - {label: "Teks Penjelasan Tentang", name: "about_desc", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three"]}
-          
+
+      - name: "home_activities"
+        label: "Beranda: Tentang & Acara"
+        file: "data/kegiatan.json"
+        fields:
           - label: "Rangkaian Acara Utama"
             name: "activities"
             widget: "list"
@@ -34,6 +36,16 @@ collections:
               - {label: "Teks Tombol (opsional)", name: "link_text", widget: "string", required: false}
               - {label: "Link Tombol (opsional)", name: "link_url", widget: "string", required: false}
 
+      - name: "home_community"
+        label: "Beranda: Galeri & Testimoni"
+        file: "data/komunitas.json"
+        fields:
+          - label: "Galeri Momen Kebahagiaan"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Foto / Gambar", name: "image", widget: "image", hint: "PENTING: Maksimal 500 KB per foto. Kompres foto Anda agar pengunjung web tidak lama menunggu loading."}
+              - {label: "Keterangan Foto (Caption)", name: "caption", widget: "string", required: false}
           - label: "Testimoni"
             name: "testimonials"
             widget: "list"
@@ -43,23 +55,19 @@ collections:
               - {label: "Nama Penulis", name: "author_name", widget: "string"}
               - {label: "Peran / Identitas", name: "author_role", widget: "string"}
 
+      - name: "home_info"
+        label: "Beranda: Sponsor & FAQ"
+        file: "data/info.json"
+        fields:
           - label: "Sponsor & Media Partner"
             name: "sponsors"
             widget: "list"
             fields:
               - {label: "Nama / Instansi", name: "name", widget: "string"}
               - {label: "Logo", name: "image", widget: "image", required: false, hint: "PENTING: Gunakan PNG/JPG. Harap kompres terlebih dahulu via tinypng.com (Maks: 500 KB) agar web tidak lemot."}
-
-          - label: "Galeri Momen Kebahagiaan"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - {label: "Foto / Gambar", name: "image", widget: "image", hint: "PENTING: Maksimal 500 KB per foto. Kompres foto Anda agar pengunjung web tidak lama menunggu loading."}
-              - {label: "Keterangan Foto (Caption)", name: "caption", widget: "string", required: false}
-
           - label: "Pertanyaan Umum (FAQ)"
             name: "faqs"
             widget: "list"
             fields:
               - {label: "Pertanyaan", name: "question", widget: "string"}
-              - {label: "Jawaban", name: "answer", widget: "markdown"}
+              - {label: "Jawaban", name: "answer", widget: "markdown", buttons: ["bold", "italic", "link"]}

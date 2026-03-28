@@ -1,0 +1,37 @@
+{
+  "activities": [
+    {
+      "title": "3K+ Family Fun Run",
+      "icon_svg": "<svg viewBox=\"0 0 24 24\" width=\"48\" height=\"48\" fill=\"currentColor\"><path d=\"M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7\"/></svg>",
+      "features": [
+        "**1K+ Pelari** dari puluhan Komunitas dan Masyarakat umum.",
+        "Track lari yang **sejuk-alami**.",
+        "Lingkungan **bersih dan aman** untuk seluruh keluarga."
+      ],
+      "link_text": "Daftar Sekarang",
+      "link_url": "register.html"
+    },
+    {
+      "title": "Loving Nature Arts Stage",
+      "icon_svg": "<svg viewBox=\"0 0 24 24\" width=\"48\" height=\"48\" fill=\"currentColor\"><path d=\"M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\"/></svg>",
+      "features": [
+        "**Senam dan Tari** Kasih Semesta.",
+        "Pertunjukan **Lagu Kasih Alam**.",
+        "Tampilan **Kesenian Tradisional** Nusantara yang memukau."
+      ],
+      "link_text": "",
+      "link_url": ""
+    },
+    {
+      "title": "Plantbased Eco Market",
+      "icon_svg": "<svg viewBox=\"0 0 24 24\" width=\"48\" height=\"48\" fill=\"currentColor\"><path d=\"M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z\"/></svg>",
+      "features": [
+        "Puluhan **Tenan Terpilih**.",
+        "Festival kuliner **Resto & Cafe Vegetarian**.",
+        "Dukungan penuh untuk produk kreatif **UMKM** lokal."
+      ],
+      "link_text": "",
+      "link_url": ""
+    }
+  ]
+}

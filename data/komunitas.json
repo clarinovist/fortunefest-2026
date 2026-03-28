@@ -1,0 +1,28 @@
+{
+  "testimonials": [
+    {
+      "text": "Acara yang sangat berkesan! Seluruh keluarga kami menikmati fun run dan eco market. Anak-anak sangat senang dengan pertunjukan seni budayanya.",
+      "author_initials": "BS",
+      "author_name": "Budi Santoso",
+      "author_role": "Peserta Fun Run 2024"
+    },
+    {
+      "text": "Medali finisher dan jersey-nya berkualitas tinggi! Track lari yang sejuk dan pemandangan alam yang indah. Pasti ikut lagi tahun depan!",
+      "author_initials": "DW",
+      "author_name": "Dewi Wahyuni",
+      "author_role": "Marathon Runner"
+    },
+    {
+      "text": "Sebagai vegetarian, saya sangat appreciate dengan eco market yang 100% plantbased. Produk lokal dan kreativitas UMKM-nya luar biasa!",
+      "author_initials": "RP",
+      "author_name": "Rizki Pratama",
+      "author_role": "Vegan Activist"
+    }
+  ],
+  "gallery": [
+    { "image": "Design/running.jpeg", "caption": "3K+ Family Fun Run" },
+    { "image": "Design/ending.png", "caption": "Loving Nature Arts Stage" },
+    { "image": "Design/super.png", "caption": "Plantbased Eco Market" },
+    { "image": "Design/cover.png", "caption": "Kebersamaan Keluarga" }
+  ]
+}

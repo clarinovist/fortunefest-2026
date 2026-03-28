@@ -15,14 +15,14 @@ collections:
         file: "data/home.json"
         fields:
           - {label: "Judul Utama Hero", name: "hero_title", widget: "string"}
-          - {label: "Subjudul Hero", name: "hero_subtitle", widget: "text"}
+          - {label: "Subjudul Hero", name: "hero_subtitle", widget: "markdown", buttons: ["bold", "italic", "link"]}
           
           - {label: "Angka Target Pelari", name: "stat_1", widget: "number"}
           - {label: "Angka Tenan", name: "stat_2", widget: "number"}
           - {label: "Angka Partner & Sponsor", name: "stat_3", widget: "number"}
           
-          - {label: "Judul Singkat Tentang", name: "about_title", widget: "string"}
-          - {label: "Teks Penjelasan Tentang", name: "about_desc", widget: "text"}
+          - {label: "Judul Singkat Tentang", name: "about_title", widget: "markdown", buttons: ["bold", "italic", "link"]}
+          - {label: "Teks Penjelasan Tentang", name: "about_desc", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three"]}
           
           - label: "Rangkaian Acara Utama"
             name: "activities"
@@ -30,7 +30,7 @@ collections:
             fields:
               - {label: "Judul Acara", name: "title", widget: "string"}
               - {label: "Ikon SVG", name: "icon_svg", widget: "text"}
-              - {label: "Poin Fitur Utama", name: "features", widget: "list", field: {label: "Fitur", name: "feature", widget: "string"}}
+              - {label: "Poin Fitur Utama", name: "features", widget: "list", field: {label: "Fitur", name: "feature", widget: "markdown", buttons: ["bold", "italic"]}}
               - {label: "Teks Tombol (opsional)", name: "link_text", widget: "string", required: false}
               - {label: "Link Tombol (opsional)", name: "link_url", widget: "string", required: false}
 
@@ -48,4 +48,4 @@ collections:
             widget: "list"
             fields:
               - {label: "Pertanyaan", name: "question", widget: "string"}
-              - {label: "Jawaban (HTML format)", name: "answer", widget: "text"}
+              - {label: "Jawaban", name: "answer", widget: "markdown"}

@@ -186,9 +186,9 @@
                 <div class="about-text glass-panel tilt-effect reveal-up">
                     <h2 class="section-title" id="cms-about-title">Merayakan Kebahagiaan,<br><span class="text-highlight">Menyatu dengan
                             Alam</span></h2>
-                    <p id="cms-about-desc">Fortune Fest hadir sebagai wadah berkumpulnya keluarga dan masyarakat untuk sinónimo, merangkul
+                    <div id="cms-about-desc" class="about-desc">Fortune Fest hadir sebagai wadah berkumpulnya keluarga dan masyarakat untuk bersama-sama merangkul
                         gaya hidup sehat, dan menikmati harmoni dengan alam semesta. Jadikan momen ini titik awal
-                        kebahagiaan baru dalam hidup Anda.</p>
+                        kebahagiaan baru dalam hidup Anda.</div>
                     <div class="about-badges">
                         <span class="badge">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
@@ -604,6 +604,14 @@
 
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Set marked options if needed
+        marked.use({
+            breaks: true // Enables line breaks with \n
+        });
+    </script>
     <!-- CMS Fetching Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -612,30 +620,30 @@
                 .then(data => {
                     // Update Text Details
                     if(data.hero_title) document.getElementById('cms-hero-title').innerHTML = data.hero_title;
-                    if(data.hero_subtitle) document.getElementById('cms-hero-subtitle').innerHTML = data.hero_subtitle;
+                    if(data.hero_subtitle) document.getElementById('cms-hero-subtitle').innerHTML = marked.parseInline(data.hero_subtitle);
                     if(data.stat_1) document.getElementById('cms-stat-1').setAttribute('data-target', data.stat_1);
                     if(data.stat_2) document.getElementById('cms-stat-2').setAttribute('data-target', data.stat_2);
                     if(data.stat_3) document.getElementById('cms-stat-3').setAttribute('data-target', data.stat_3);
-                    if(data.about_title) document.getElementById('cms-about-title').innerHTML = data.about_title;
-                    if(data.about_desc) document.getElementById('cms-about-desc').innerHTML = data.about_desc;
+                    if(data.about_title) document.getElementById('cms-about-title').innerHTML = marked.parseInline(data.about_title);
+                    if(data.about_desc) document.getElementById('cms-about-desc').innerHTML = marked.parse(data.about_desc);
 
                     // Update Activities List
                     if(data.activities && data.activities.length > 0) {
-                        const activitiesGrid = document.getElementById('activitiesGrid');
-                        let actHtml = '';
-                        data.activities.forEach((act, index) => {
-                            let featuresHtml = act.features ? act.features.map(f => `<li>${f}</li>`).join('') : '';
-                            let linkHtml = (act.link_url && act.link_text) ? `<a href="${act.link_url}" class="card-link">${act.link_text} <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : '';
-                            actHtml += `
-                            <div class="activity-card glass-panel reveal-up delay-${(index % 3) + 1} active">
-                                <div class="card-icon">${act.icon_svg}</div>
-                                <h3>${act.title}</h3>
-                                <div class="card-divider"></div>
-                                <ul class="activity-features">${featuresHtml}</ul>
-                                ${linkHtml}
-                            </div>`;
-                        });
-                        activitiesGrid.innerHTML = actHtml;
+                         const activitiesGrid = document.getElementById('activitiesGrid');
+                         let actHtml = '';
+                         data.activities.forEach((act, index) => {
+                             let featuresHtml = act.features ? act.features.map(f => `<li>${marked.parseInline(f)}</li>`).join('') : '';
+                             let linkHtml = (act.link_url && act.link_text) ? `<a href="${act.link_url}" class="card-link">${act.link_text} <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>` : '';
+                             actHtml += `
+                             <div class="activity-card glass-panel reveal-up delay-${(index % 3) + 1} active">
+                                 <div class="card-icon">${act.icon_svg}</div>
+                                 <h3>${act.title}</h3>
+                                 <div class="card-divider"></div>
+                                 <ul class="activity-features">${featuresHtml}</ul>
+                                 ${linkHtml}
+                             </div>`;
+                         });
+                         activitiesGrid.innerHTML = actHtml;
                     }
 
                     // Update Testimonials List
@@ -648,7 +656,7 @@
                                 <div class="testimonial-rating">
                                     ${'<svg viewBox="0 0 24 24" width="20" height="20" fill="#F0BB1B"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>'.repeat(5)}
                                 </div>
-                                <p class="testimonial-text">"${t.text}"</p>
+                                <p class="testimonial-text">"${marked.parseInline(t.text)}"</p>
                                 <div class="testimonial-author">
                                     <div class="author-avatar">${t.author_initials}</div>
                                     <div class="author-info">
@@ -670,7 +678,7 @@
                             faqHtml += `
                             <details class="faq-item" ${isOpen}>
                                 <summary class="faq-question">${faq.question}</summary>
-                                <div class="faq-answer">${faq.answer}</div>
+                                <div class="faq-answer">${marked.parse(faq.answer)}</div>
                             </details>`;
                         });
                         faqContainer.innerHTML = faqHtml;

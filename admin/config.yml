@@ -48,13 +48,13 @@ collections:
             widget: "list"
             fields:
               - {label: "Nama / Instansi", name: "name", widget: "string"}
-              - {label: "Logo", name: "image", widget: "image", required: false}
+              - {label: "Logo", name: "image", widget: "image", required: false, hint: "PENTING: Gunakan PNG/JPG. Harap kompres terlebih dahulu via tinypng.com (Maks: 500 KB) agar web tidak lemot."}
 
           - label: "Galeri Momen Kebahagiaan"
             name: "gallery"
             widget: "list"
             fields:
-              - {label: "Foto / Gambar", name: "image", widget: "image"}
+              - {label: "Foto / Gambar", name: "image", widget: "image", hint: "PENTING: Maksimal 500 KB per foto. Kompres foto Anda agar pengunjung web tidak lama menunggu loading."}
               - {label: "Keterangan Foto (Caption)", name: "caption", widget: "string", required: false}
 
           - label: "Pertanyaan Umum (FAQ)"

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,21 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css">
 </head>
+
 <body class="bg-light">
 
     <!-- Navbar -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
             <div class="nav-logo" style="opacity: 1; transform: translateY(0); pointer-events: auto;">
-                <img src="Design/INLA INDO GREEN.png" alt="INLA Logo" class="inla-logo" onerror="this.style.display='none'">
+                <img src="Design/logo-inla.png" alt="INLA Logo" class="inla-logo" onerror="this.style.display='none'">
                 <span class="nav-brand" style="color: var(--primary-green);">Fortune Fest</span>
             </div>
             <ul class="nav-links">
@@ -34,7 +38,8 @@
     <header class="form-header bg-primary">
         <div class="container text-center">
             <h1 class="text-white fade-in-up">Formulir <span class="text-highlight-yellow">Pendaftaran</span></h1>
-            <p class="text-white fade-in-up delay-1" style="max-width: 600px; margin: 10px auto 0; font-size: 1.1rem; opacity: 0.9;">
+            <p class="text-white fade-in-up delay-1"
+                style="max-width: 600px; margin: 10px auto 0; font-size: 1.1rem; opacity: 0.9;">
                 Lengkapi data diri Anda di bawah ini untuk bergabung merayakan kebahagiaan di Taman Dayu.
             </p>
         </div>
@@ -45,7 +50,7 @@
         <div class="container file-reveal fade-in-up delay-2">
             <div class="form-wrapper glass-panel">
                 <form action="#" method="POST" id="registrationForm">
-                    
+
                     <!-- Section 1: Ticket Type -->
                     <div class="form-group-section">
                         <h3 class="form-section-title">Kategori Tiket</h3>
@@ -75,15 +80,18 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="fullname">Nama Lengkap (Sesuai KTP) <span class="required">*</span></label>
-                                <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Cth: Budi Santoso" required>
+                                <input type="text" id="fullname" name="fullname" class="form-control"
+                                    placeholder="Cth: Budi Santoso" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Alamat Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="Cth: budi@email.com" required>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Cth: budi@email.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="whatsapp">No. WhatsApp <span class="required">*</span></label>
-                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="Cth: 08123456789" required>
+                                <input type="tel" id="whatsapp" name="whatsapp" class="form-control"
+                                    placeholder="Cth: 08123456789" required>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Jenis Kelamin <span class="required">*</span></label>
@@ -135,15 +143,19 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="emergency_name">Nama Kontak Darurat <span class="required">*</span></label>
-                                <input type="text" id="emergency_name" name="emergency_name" class="form-control" placeholder="Nama keluarga atau teman dekat" required>
+                                <input type="text" id="emergency_name" name="emergency_name" class="form-control"
+                                    placeholder="Nama keluarga atau teman dekat" required>
                             </div>
                             <div class="form-group">
-                                <label for="emergency_phone">No. HP Kontak Darurat <span class="required">*</span></label>
-                                <input type="tel" id="emergency_phone" name="emergency_phone" class="form-control" placeholder="Nomor yg bisa dihubungi saat darurat" required>
+                                <label for="emergency_phone">No. HP Kontak Darurat <span
+                                        class="required">*</span></label>
+                                <input type="tel" id="emergency_phone" name="emergency_phone" class="form-control"
+                                    placeholder="Nomor yg bisa dihubungi saat darurat" required>
                             </div>
                             <div class="form-group" style="grid-column: 1 / -1;">
                                 <label for="medical_history">Riwayat Penyakit (Opsional)</label>
-                                <textarea id="medical_history" name="medical_history" class="form-control" rows="3" placeholder="Sebutkan jika Anda memiliki riwayat penyakit tertentu (Asma, Jantung, dll)"></textarea>
+                                <textarea id="medical_history" name="medical_history" class="form-control" rows="3"
+                                    placeholder="Sebutkan jika Anda memiliki riwayat penyakit tertentu (Asma, Jantung, dll)"></textarea>
                             </div>
                         </div>
                     </div>
@@ -155,9 +167,11 @@
                         <label class="checkbox-container">
                             <input type="checkbox" id="terms" name="terms" required>
                             <span class="checkmark"></span>
-                            <span class="terms-text">Saya menyetujui seluruh <a href="#" class="text-highlight">Syarat dan Ketentuan</a> acara Fortune Fest 2026, dan menyatakan dalam kondisi fisik yang sehat untuk mengikuti aktivitas yang saya pilih.</span>
+                            <span class="terms-text">Saya menyetujui seluruh <a href="#" class="text-highlight">Syarat
+                                    dan Ketentuan</a> acara Fortune Fest 2026, dan menyatakan dalam kondisi fisik yang
+                                sehat untuk mengikuti aktivitas yang saya pilih.</span>
                         </label>
-                        
+
                         <div class="form-submit-container">
                             <button type="submit" class="btn btn-primary submit-btn">Selesaikan Pendaftaran</button>
                         </div>
@@ -171,7 +185,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <img src="Design/logo fortune fest.png" alt="Fortune Fest" class="footer-logo">
+            <img src="Design/logo-main.png" alt="Fortune Fest" class="footer-logo">
             <p>&copy; 2026 INLA Indonesia - Fortune Fest: Rise in Happiness. All Rights Reserved.</p>
         </div>
     </footer>
@@ -199,17 +213,17 @@
             radUmum.addEventListener('change', updateFormDisplay);
 
             // === 2. Logika Submit ke Google Form ===
-            
+
             // PANDUAN INTEGRASI GOOGLE FORM:
             // 1. Buat Google Form dengan pertanyaan yang sesuai dengan form ini.
             // 2. Dapatkan URL Action Google Form (Inspect element di Google Form -> cari <form action="...">)
             // URL Web App dari Google Apps Script
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDTFj9KYiHJ3_wF33jzVAi4hdEr2Yym0OdOTETTRsCkusHmB-KMoXXBsf5zy2Hu-7O2Q/exec'; 
-            
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDTFj9KYiHJ3_wF33jzVAi4hdEr2Yym0OdOTETTRsCkusHmB-KMoXXBsf5zy2Hu-7O2Q/exec';
+
             const registrationForm = document.getElementById('registrationForm');
             const submitBtn = document.querySelector('.submit-btn');
 
-            registrationForm.addEventListener('submit', function(e) {
+            registrationForm.addEventListener('submit', function (e) {
                 e.preventDefault(); // Mencegah form reload page standar
 
                 // Ubah status tombol
@@ -220,12 +234,12 @@
 
                 // Siapkan data form
                 const formData = new FormData(registrationForm);
-                
+
                 // Jika ingin mengirim data manual berdasarkan key yang sesuai dengan GAS
                 const payload = new FormData();
                 const ticketCat = document.querySelector('input[name="ticket_category"]:checked');
-                if(ticketCat) payload.append('ticket_category', ticketCat.value);
-                
+                if (ticketCat) payload.append('ticket_category', ticketCat.value);
+
                 const inputs = ['fullname', 'email', 'whatsapp', 'gender', 'dob', 'blood_type', 'tshirt_size', 'emergency_name', 'emergency_phone', 'medical_history'];
                 inputs.forEach(id => {
                     const el = document.getElementById(id);
@@ -238,18 +252,19 @@
                     method: 'POST',
                     body: payload
                 }).then(response => response.text())
-                .then(result => {
-                    // Berhasil dikirim, arahkan ke halaman sukses
-                    window.location.href = 'success.html';
-                }).catch(err => {
-                    alert('Terjadi kesalahan saat menghubungi server pendaftaran. Silakan coba lagi.');
-                    console.error('Error:', err);
-                    submitBtn.innerText = originalBtnText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.opacity = '1';
-                });
+                    .then(result => {
+                        // Berhasil dikirim, arahkan ke halaman sukses
+                        window.location.href = 'success.html';
+                    }).catch(err => {
+                        alert('Terjadi kesalahan saat menghubungi server pendaftaran. Silakan coba lagi.');
+                        console.error('Error:', err);
+                        submitBtn.innerText = originalBtnText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.opacity = '1';
+                    });
             });
         });
     </script>
 </body>
+
 </html>

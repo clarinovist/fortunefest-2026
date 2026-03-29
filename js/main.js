@@ -193,8 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (slideCount === 0) return;
 
             function updateSlider() {
-                const slideWidth = 100 / (slideCount || 1);
-                testimonialTrack.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+                testimonialTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
             }
 
             if (testimonialPrev) {
@@ -343,8 +342,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('particles-js');
         if (!container) return;
         
-        const colors = ['#37A248', '#F0BB1B', '#2CA5D3'];
-        const particleCount = 30;
+        const colors = ['#4A7C3F', '#D4A017', '#8B7355'];
+        const particleCount = 20;
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
@@ -362,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 height: ${size}px;
                 background: ${color};
                 border-radius: 50%;
-                opacity: 0.3;
+                opacity: 0.15;
                 left: ${left}%;
                 top: -20px;
                 animation: particleFall ${animationDuration}s linear ${delay}s infinite;
@@ -383,10 +382,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         opacity: 0;
                     }
                     10% {
-                        opacity: 0.3;
+                        opacity: 0.15;
                     }
                     90% {
-                        opacity: 0.3;
+                        opacity: 0.15;
                     }
                     100% {
                         transform: translateY(100vh) rotate(720deg);

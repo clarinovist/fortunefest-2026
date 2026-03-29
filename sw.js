@@ -9,8 +9,8 @@ const STATIC_ASSETS = [
     '/css/form.css',
     '/js/main.js',
     '/manifest.json',
-    '/Design/logo fortune fest.png',
-    '/Design/INLA INDO GREEN.png'
+    '/Design/logo-main.png',
+    '/Design/logo-inla.png'
 ];
 
 // Install event - cache static assets
@@ -95,8 +95,8 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('push', (event) => {
     const options = {
         body: event.data ? event.data.text() : 'Fortune Fest 2026 - Jangan lewatkan!',
-        icon: 'Design/logo fortune fest.png',
-        badge: 'Design/logo fortune fest.png',
+        icon: 'Design/logo-main.png',
+        badge: 'Design/logo-main.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),

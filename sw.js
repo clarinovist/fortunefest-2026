@@ -1,5 +1,5 @@
 // Fortune Fest 2026 - Service Worker
-const CACHE_NAME = 'fortune-fest-v1';
+const CACHE_NAME = 'fortune-fest-v2';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
@@ -9,7 +9,7 @@ const STATIC_ASSETS = [
     '/css/form.css',
     '/js/main.js',
     '/manifest.json',
-    '/Design/logo-main.png',
+    '/Design/logo-fortunefest-new.png',
     '/Design/logo-inla.png'
 ];
 
@@ -95,8 +95,8 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('push', (event) => {
     const options = {
         body: event.data ? event.data.text() : 'Fortune Fest 2026 - Jangan lewatkan!',
-        icon: 'Design/logo-main.png',
-        badge: 'Design/logo-main.png',
+        icon: 'Design/logo-fortunefest-new.png',
+        badge: 'Design/logo-fortunefest-new.png',
         vibrate: [100, 50, 100],
         data: {
             dateOfArrival: Date.now(),

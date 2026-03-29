@@ -12,13 +12,13 @@
     "categories": ["events", "lifestyle"],
     "icons": [
         {
-            "src": "Design/logo-main.png",
+            "src": "Design/logo-fortunefest-new.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "Design/logo-main.png",
+            "src": "Design/logo-fortunefest-new.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
@@ -26,7 +26,7 @@
     ],
     "screenshots": [
         {
-            "src": "Design/banner-hero.jpg",
+            "src": "Design/banner-hero-new.jpeg",
             "sizes": "1280x720",
             "type": "image/png",
             "form_factor": "wide",
@@ -39,14 +39,14 @@
             "short_name": "Daftar",
             "description": "Daftar sebagai peserta 3K+ Family Fun Run",
             "url": "/register.html",
-            "icons": [{ "src": "Design/logo-main.png", "sizes": "96x96" }]
+            "icons": [{ "src": "Design/logo-fortunefest-new.png", "sizes": "96x96" }]
         },
         {
             "name": "Lihat Detail",
             "short_name": "Detail",
             "description": "Lihat detail acara Fortune Fest",
             "url": "/#details",
-            "icons": [{ "src": "Design/logo-main.png", "sizes": "96x96" }]
+            "icons": [{ "src": "Design/logo-fortunefest-new.png", "sizes": "96x96" }]
         }
     ],
     "related_applications": [],

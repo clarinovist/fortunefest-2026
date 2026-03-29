@@ -1,0 +1,140 @@
+/* ==============================
+   Reset & Base Typography
+============================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* ==============================
+   Particles Container
+============================== */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* ==============================
+   Typography & Utilities
+============================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-highlight {
+    color: var(--primary-green);
+    position: relative;
+    display: inline-block;
+}
+
+.text-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(212, 160, 23, 0.35);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.section {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.bg-light {
+    background: var(--bg-light);
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, var(--primary-green), #3A6331);
+}
+
+.text-highlight-yellow {
+    color: var(--primary-yellow);
+    position: relative;
+    display: inline-block;
+}
+
+/* ==============================
+   Global Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    .section { padding: 4rem 0; }
+    .section-title { font-size: 1.8rem; }
+}
+
+/* ==============================
+   Print Styles
+============================== */
+@media print {
+    .section {
+        padding: 2rem 0;
+    }
+}

@@ -1,0 +1,21 @@
+/* ==============================
+   CSS Variables
+============================== */
+:root {
+    --primary-green: #4A7C3F;
+    --primary-yellow: #D4A017;
+    --accent-brown: #5C3D2E;
+    --text-dark: #3B2F20;
+    --text-muted: #6B5D4F;
+    --text-light: #FFFFFF;
+    --bg-light: #F5F0E1;
+    --bg-cream: #EDE8D5;
+    --white: #FFFDF7;
+    
+    --font-heading: 'Caveat', cursive;
+    --font-accent: 'Kalam', cursive;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

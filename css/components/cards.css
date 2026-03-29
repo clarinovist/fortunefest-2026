@@ -1,0 +1,93 @@
+/* ==============================
+   Card / Panel Styles
+============================== */
+.glass-panel {
+    background: rgba(255, 253, 247, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(92, 61, 46, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(59, 47, 32, 0.06);
+    padding: 2.5rem;
+}
+
+/* ==============================
+   Floating WA & Back to Top
+============================== */
+.floating-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+.floating-wa:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: var(--primary-green);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(55, 162, 72, 0.4);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-smooth);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    background: #2E8A3C;
+}
+
+/* ==============================
+   Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    /* Back to Top */
+    .back-to-top {
+        bottom: 100px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* Floating WA */
+    .floating-wa {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .floating-wa, .back-to-top {
+        display: none !important;
+    }
+}

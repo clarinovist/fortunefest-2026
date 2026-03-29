@@ -1,0 +1,87 @@
+/* ==============================
+   About Section
+============================== */
+.about {
+    padding: 0;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.about-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about-bg-image {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: contain;
+}
+
+.about-overlay {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.about-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(74, 124, 63, 0.1);
+    color: var(--primary-green);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: var(--font-accent);
+}
+
+/* ==============================
+   Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    /* About Section */
+    .about-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-overlay {
+        position: relative;
+        width: 100%;
+        height: auto;
+        clip: auto;
+        overflow: visible;
+        margin-top: -60px;
+        padding: 0 15px;
+    }
+    .about-text {
+        padding: 2rem 1.5rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+}

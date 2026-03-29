@@ -1,0 +1,50 @@
+/* ==============================
+   Footer
+============================== */
+footer {
+    background: var(--accent-brown);
+    color: var(--text-light);
+    padding: 3rem 0;
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.footer-social a:hover {
+    background: var(--primary-green);
+    transform: translateY(-3px);
+}
+
+footer p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    footer { padding: 2rem 0; text-align: center; }
+    .footer-logo { margin: 0 auto 1.5rem; }
+    .footer-social { justify-content: center; }
+}

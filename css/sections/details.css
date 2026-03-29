@@ -1,0 +1,123 @@
+/* ==============================
+   Details Section
+============================== */
+.details {
+    background: url('../../Design/banner-eco.jpg') center/cover no-repeat, linear-gradient(135deg, var(--primary-green), #3A6331);
+    position: relative;
+    color: var(--text-dark);
+}
+
+.details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.details .container {
+    position: relative;
+    z-index: 2;
+}
+
+.details-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.details-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.details-map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.details-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.details-info .tagline {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.8);
+    transition: var(--transition-smooth);
+}
+
+.info-item:hover {
+    background: rgba(255,255,255,0.8);
+    transform: translateX(5px);
+}
+
+.info-item .icon {
+    color: var(--primary-green);
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+}
+
+.info-item p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ==============================
+   Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    /* Details Section */
+    .details-info h2 { font-size: 1.8rem; }
+    .info-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 1.5rem;
+    }
+    .info-item .icon { margin-bottom: 0.5rem; }
+    .info-item p { font-size: 1.1rem; }
+    
+    .details-flex { grid-template-columns: 1fr; gap: 2rem; }
+    .details-map { min-height: 250px; }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}

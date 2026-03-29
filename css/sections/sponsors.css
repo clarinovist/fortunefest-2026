@@ -1,0 +1,46 @@
+/* ==============================
+   Sponsors
+============================== */
+.sponsors-carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.sponsors-track {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 20s linear infinite;
+}
+
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    opacity: 0.7;
+}
+.sponsor-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    color: #64748b;
+    filter: grayscale(100%);
+    transition: var(--transition-smooth);
+    cursor: default;
+    white-space: nowrap;
+}
+
+.sponsor-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    color: var(--primary-green);
+}
+
+/* ==============================
+   Responsive Queries
+============================== */
+@media (max-width: 768px) {
+    /* Sponsors */
+    .sponsors-grid { gap: 1.5rem; justify-content: center; }
+}

@@ -173,14 +173,14 @@ button {
 }
 
 .btn-outline {
-    background: transparent;
-    color: var(--white);
-    border-color: var(--white);
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--primary-green);
+    border-color: var(--primary-green);
 }
 
 .btn-outline:hover {
-    background: var(--white);
-    color: var(--primary-green);
+    background: var(--primary-green);
+    color: var(--white);
     transform: translateY(-3px);
 }
 
@@ -278,7 +278,7 @@ button {
 
 .nav-links a {
     font-weight: 500;
-    color: var(--white);
+    color: var(--text-dark);
     font-size: 1.05rem;
     position: relative;
     transition: color 0.3s ease;

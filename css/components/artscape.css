@@ -1,0 +1,169 @@
+/* ============================================
+   ARTSCAPE SECTION
+   ============================================ */
+.artscape {
+  padding: 100px 0;
+  background: var(--cream-light);
+  background-image: 
+    radial-gradient(circle at top right, rgba(212,169,52,0.08) 0%, transparent 40%),
+    radial-gradient(circle at bottom left, rgba(160,89,58,0.05) 0%, transparent 40%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative texture overlay */
+.artscape::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/img/craft-texture.png');
+  background-size: 500px;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.artscape-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.artscape-header .section-label {
+  color: var(--gold-dark);
+}
+
+.artscape-header .section-title {
+  color: var(--text-dark);
+}
+
+.artscape-header .section-subtitle {
+  color: var(--terracotta);
+  position: relative;
+  display: inline-block;
+}
+
+.artscape-header .section-subtitle::before,
+.artscape-header .section-subtitle::after {
+  content: '"';
+  font-family: var(--font-decor);
+  font-size: 1.5em;
+  color: var(--gold-light);
+  vertical-align: bottom;
+  line-height: 0;
+}
+
+.artscape-header .section-desc {
+  color: var(--text-body);
+  margin: 0 auto;
+}
+
+/* Artscape Cards */
+.artscape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+  align-items: start; /* allow cards to vary in height/offset naturally */
+  padding-bottom: 50px; /* room for offset */
+}
+
+/* Organic Brutalism - Staggered layout on desktop */
+@media screen and (min-width: 900px) {
+  .artscape-card:nth-child(2) {
+    margin-top: 50px;
+  }
+  .artscape-card:nth-child(3) {
+    margin-top: -20px;
+  }
+}
+
+.artscape-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--cream-bg);
+  border: 1px solid var(--ghost-border-dark);
+  border-bottom-width: 3px;
+  transition: all var(--transition-med);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(42, 31, 20, 0.05); /* very subtle */
+}
+
+.artscape-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ambient-shadow-light);
+  border-bottom-color: rgba(212, 169, 52, 0.5);
+}
+
+.artscape-card-img {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+.artscape-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  transition: transform var(--transition-slow);
+  mix-blend-mode: multiply;
+}
+
+.artscape-card:hover .artscape-card-img img {
+  transform: scale(1.08);
+}
+
+.artscape-card-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(245, 236, 215, 0.95), transparent);
+  pointer-events: none;
+}
+
+.artscape-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+  z-index: 2;
+}
+
+.artscape-card-tag {
+  display: inline-block;
+  background: rgba(212,169,52,0.25);
+  color: var(--brown-dark);
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: var(--radius-xl);
+  margin-bottom: 12px;
+  border: 1px solid rgba(212,169,52,0.3);
+}
+
+.artscape-card-content h3 {
+  font-family: var(--font-decor);
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.artscape-card-content p {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+

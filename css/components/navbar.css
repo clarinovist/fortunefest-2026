@@ -1,0 +1,103 @@
+/* ============================================
+   FIXED NAVBAR
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(42, 31, 20, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 226, 179, 0.1);
+  padding: 10px 5%;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.navbar-logo img {
+  height: 28px;
+  margin-right: 12px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-menu li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-light);
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: var(--gold-light);
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-actions .btn {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-menu {
+    display: none; /* Can implement mobile menu later if needed */
+  }
+  
+  .navbar-logo span {
+    display: none; /* Hide text on mobile, just show logo */
+  }
+}

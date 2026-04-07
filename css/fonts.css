@@ -1,0 +1,17 @@
+/* ============================================
+   FORTUNE FEST — "Rise in Happiness"
+   Landing Page Stylesheet
+   Earthy Heritage Festival Design System
+   ============================================ */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* --- Custom Fonts Import --- */
+@font-face {
+  font-family: 'Runtoe';
+  src: url('../assets/fonts/RUNTOE.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

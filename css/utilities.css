@@ -1,0 +1,192 @@
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sub);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-primary);
+  margin-bottom: 20px;
+  background: var(--cream-light);
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(212,169,52,0.3);
+  box-shadow: 0 2px 8px rgba(42, 31, 20, 0.05);
+}
+
+.section-label .label-line {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold-accent);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+  text-shadow: 2px 2px 0px rgba(245,236,215,0.4);
+}
+
+.section-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--terracotta);
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+/* Modifier untuk light text pada background gelap */
+.section-dark .section-label {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gold-light);
+  border-color: rgba(212,169,52,0.2);
+}
+
+.section-dark .section-title {
+  color: var(--cream-bg);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.section-dark .section-subtitle {
+  color: var(--gold-accent);
+}
+
+.section-dark .section-desc {
+  color: rgba(245, 236, 215, 0.8);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--gold-dark);
+  transition: all var(--transition-fast);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--green-primary);
+  color: var(--cream-bg);
+  box-shadow: var(--vintage-shadow);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px rgba(42, 31, 20, 0.5);
+  background: var(--green-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brown-earth);
+  border: 2px solid var(--brown-earth);
+  box-shadow: var(--vintage-shadow);
+}
+.btn-secondary:hover {
+  background: var(--brown-earth);
+  color: var(--cream-bg);
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px rgba(42, 31, 20, 0.5);
+}
+
+.btn-gold {
+  background: var(--gold-accent);
+  color: var(--text-dark);
+  box-shadow: var(--vintage-shadow);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px rgba(42, 31, 20, 0.5);
+  background: var(--gold-dark);
+  color: var(--cream-light);
+}
+
+.btn-transparent-outline {
+  color: #fff;
+  border-color: rgba(255,255,255,0.5);
+}
+
+.bg-gradient-gold-light {
+  background: linear-gradient(90deg, transparent, #E8C95A, transparent);
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+/* --- Scroll Animations --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered delay */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+

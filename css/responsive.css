@@ -1,0 +1,209 @@
+/* ============================================
+   RESPONSIVE — Tablet
+   ============================================ */
+@media (max-width: 992px) {
+  .artscape-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .artscape-card-img {
+    height: 320px;
+  }
+
+  .funrun-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .funrun-text {
+    order: 1;
+    text-align: center;
+  }
+
+  .funrun-text .section-desc {
+    margin: 0 auto 36px;
+  }
+
+  .funrun-text .leaf-ornament {
+    justify-content: center !important;
+  }
+
+  .funrun-visual {
+    order: 2;
+    height: 420px;
+  }
+
+  .funrun-text .funrun-features {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .funrun-text .hero-actions,
+  .funrun-text .btn {
+    justify-content: center;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile
+   ============================================ */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px 0;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+
+  .hero-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  /* Earth Market */
+  .earth-market {
+    padding: 60px 0;
+  }
+
+  .market-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .market-card {
+    padding: 24px 16px;
+  }
+
+  .market-card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+  }
+
+  /* Artscape */
+  .artscape {
+    padding: 60px 0;
+  }
+
+  .artscape-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .artscape-card-img {
+    height: 300px;
+  }
+
+  /* Fun Run */
+  .funrun {
+    padding: 60px 0;
+  }
+
+  .funrun-visual {
+    height: 350px;
+  }
+
+  .funrun-runner-1 {
+    width: 200px;
+    height: 300px;
+  }
+
+  .funrun-runner-2 {
+    width: 180px;
+    height: 280px;
+  }
+
+  .funrun-badge {
+    width: 80px;
+    height: 80px;
+  }
+
+  .funrun-badge .badge-number {
+    font-size: 1.4rem;
+  }
+
+  .funrun-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  /* Footer */
+  .footer-info {
+    padding: 60px 0 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — Small Mobile
+   ============================================ */
+@media (max-width: 480px) {
+  .market-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funrun-stats {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .funrun-visual {
+    height: 300px;
+  }
+
+  .funrun-runner-1 {
+    width: 170px;
+    height: 260px;
+    left: -10px;
+  }
+
+  .funrun-runner-2 {
+    width: 160px;
+    height: 240px;
+    right: -10px;
+  }
+}

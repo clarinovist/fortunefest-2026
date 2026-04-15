@@ -3,12 +3,17 @@
    ============================================ */
 .earth-market {
   padding: 100px 0 80px;
-  background: linear-gradient(180deg, var(--green-dark) 0%, var(--brown-dark) 100%);
+  background:
+    linear-gradient(180deg, rgba(255, 243, 214, 0.58) 0%, rgba(233, 244, 226, 0.42) 54%, rgba(213, 233, 205, 0.52) 100%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 220, 140, 0.08) 100%),
+    url('../../assets/img/festival-banner.jpeg');
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle background pattern & Festival Illustration */
+/* Morning background pattern & festival illustration */
 .earth-market::before {
   content: '';
   position: absolute;
@@ -17,12 +22,23 @@
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(circle at center, rgba(212,169,52,0.15) 0%, transparent 60%),
-    url('../../assets/img/festival-banner.png');
-  background-size: cover, cover;
-  background-position: center, center;
-  mix-blend-mode: normal, color-dodge;
-  opacity: 0.35;
+    radial-gradient(circle at 20% 18%, rgba(255, 231, 170, 0.85) 0%, rgba(255, 231, 170, 0.18) 20%, transparent 38%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 36%);
+  background-size: auto, auto;
+  background-position: top left, top center;
+  mix-blend-mode: screen, normal;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.earth-market::after {
+  content: '';
+  position: absolute;
+  inset: auto -8% -28% auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 205, 92, 0.22) 0%, rgba(255, 205, 92, 0.06) 45%, transparent 72%);
   pointer-events: none;
 }
 
@@ -31,6 +47,43 @@
   margin-bottom: 60px;
   position: relative;
   z-index: 1;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 28px 36px 34px;
+}
+
+.earth-market-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(250, 245, 234, 0.64) 0%, rgba(245, 236, 215, 0.42) 100%);
+  box-shadow: 0 18px 44px rgba(42, 31, 20, 0.12);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.earth-market .section-label {
+  background: rgba(250, 245, 234, 0.88);
+  color: var(--gold-dark);
+  border-color: rgba(176, 138, 30, 0.28);
+}
+
+.earth-market .section-title {
+  color: var(--brown-dark);
+  text-shadow: 0 2px 0 rgba(255, 248, 232, 0.9), 0 8px 20px rgba(255, 248, 232, 0.45);
+}
+
+.earth-market .section-subtitle {
+  color: var(--gold-dark);
+  text-shadow: 0 1px 0 rgba(255, 248, 232, 0.75);
+}
+
+.earth-market .section-desc {
+  color: var(--brown-dark);
+  text-shadow: 0 1px 0 rgba(255, 248, 232, 0.72);
 }
 
 .earth-market-header .section-desc {
@@ -59,14 +112,27 @@
 /* Market Cards Grid */
 .market-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
+.market-grid .market-card {
+  grid-column: span 2;
+}
+
+.market-grid .market-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.market-grid .market-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
 .market-card {
-  background-color: rgba(247, 241, 231, 0.95);
+  background-color: rgba(255, 251, 243, 0.94);
   background-image: url('../../assets/img/craft-texture.png');
   background-size: 300px;
   background-blend-mode: multiply;
@@ -75,9 +141,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 20px rgba(107, 68, 35, 0.05); /* deep shadow plus inner vignette */
+  box-shadow: 0 14px 24px rgba(118, 95, 45, 0.12), inset 0 0 20px rgba(107, 68, 35, 0.04);
   transition: all var(--transition-med);
-  border: 1px solid rgba(107, 68, 35, 0.2);
+  border: 1px solid rgba(168, 126, 52, 0.18);
 }
 
 .market-card::before {
@@ -94,15 +160,15 @@
 
 .market-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.5), inset 0 0 30px rgba(212, 169, 52, 0.1);
-  border-color: rgba(212, 169, 52, 0.5); /* subtle gold */
+  box-shadow: 0 18px 32px rgba(118, 95, 45, 0.2), inset 0 0 30px rgba(212, 169, 52, 0.08);
+  border-color: rgba(212, 169, 52, 0.42);
 }
 
 .market-card-icon {
   width: 72px;
   height: 72px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--cream-bg), var(--sand));
+  background: linear-gradient(135deg, rgba(255, 248, 232, 1), rgba(255, 227, 171, 0.94));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +176,7 @@
   font-size: 2rem;
   transition: all var(--transition-med);
   border: 2px solid var(--brown-earth);
-  box-shadow: inset 0 0 0 3px var(--cream-light), 0 4px 12px rgba(42,31,20,0.15);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.7), 0 6px 16px rgba(170, 135, 60, 0.18);
 }
 
 .market-card:hover .market-card-icon {

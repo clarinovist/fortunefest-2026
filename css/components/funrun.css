@@ -38,10 +38,21 @@
 .funrun-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'intro image'
+    'details image';
   gap: 60px;
-  align-items: center;
+  align-items: start;
   position: relative;
   z-index: 1;
+}
+
+.funrun-intro {
+  grid-area: intro;
+}
+
+.funrun-details {
+  grid-area: details;
 }
 
 .funrun-text .section-desc {
@@ -50,15 +61,32 @@
 
 /* Fun Run Illustration Map */
 .funrun-image {
+  grid-area: image;
   place-self: center;
   width: 100%;
 }
+
 .funrun-image img {
   width: 100%;
   max-width: 520px;
   border-radius: 20px;
   box-shadow: var(--ambient-shadow-dark);
   border: 1px solid rgba(212, 169, 52, 0.15); /* Delicate gold ghost border */
+}
+
+.funrun-map-note {
+  max-width: 520px;
+  margin: 16px auto 0;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(245, 236, 215, 0.78);
+  background: rgba(42, 31, 20, 0.24);
+  border-left: 3px solid rgba(212, 169, 52, 0.55);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  text-align: left;
 }
 
 /* Fun Run Stats */

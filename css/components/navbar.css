@@ -90,14 +90,35 @@
 /* Responsive adjustment for small screens */
 @media (max-width: 768px) {
   .navbar-container {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    row-gap: 10px;
   }
-  
+
   .navbar-menu {
-    display: none; /* Can implement mobile menu later if needed */
+    display: flex;
+    grid-column: 1 / -1;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
   }
-  
+
+  .navbar-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-menu li {
+    flex: 0 0 auto;
+  }
+
+  .navbar-menu li a {
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
   .navbar-logo span {
-    display: none; /* Hide text on mobile, just show logo */
+    display: none;
   }
 }

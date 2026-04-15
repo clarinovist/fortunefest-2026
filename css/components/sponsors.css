@@ -156,16 +156,31 @@
     padding: 28px 0;
   }
 
+  .sponsor-marquee::before,
+  .sponsor-marquee::after {
+    display: none;
+  }
+
   .sponsor-track {
-    gap: 32px;
+    width: 100%;
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 12px;
   }
 
   .sponsor-logo {
-    padding: 14px 24px;
+    width: calc(33.333% - 8px);
+    min-width: 92px;
+    padding: 8px 6px;
   }
 
   .sponsor-logo img {
     height: 48px;
+  }
+
+  .sponsor-track .sponsor-logo:nth-child(n + 7) {
+    display: none;
   }
 
   .sponsor-logo--taman-dayu img {
@@ -178,5 +193,33 @@
 
   .sponsor-logo--sina img {
     height: 54px !important;
+  }
+
+  .sponsor-cta {
+    margin-top: 16px;
+    padding: 0 18px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-logo {
+    width: calc(50% - 8px);
+  }
+
+  .sponsor-logo img {
+    height: 44px;
+  }
+
+  .sponsor-logo--taman-dayu img {
+    height: 62px !important;
+  }
+
+  .sponsor-logo--tanrise img {
+    height: 50px !important;
+  }
+
+  .sponsor-logo--sina img {
+    height: 50px !important;
   }
 }

@@ -4,13 +4,13 @@
 @import url('css/utilities.css?v=3');
 
 /* Components */
-@import url('css/components/navbar.css?v=5');
+@import url('css/components/navbar.css?v=6');
 @import url('css/components/hero.css?v=4');
 @import url('css/components/divider.css?v=4');
 @import url('css/components/earth-market.css?v=4');
 @import url('css/components/artscape.css?v=4');
 @import url('css/components/funrun.css?v=6');
-@import url('css/components/sponsors.css?v=13');
+@import url('css/components/sponsors.css?v=14');
 @import url('css/components/footer.css?v=10');
 
 /* Responsive */

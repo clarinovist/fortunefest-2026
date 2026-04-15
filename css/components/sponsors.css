@@ -107,6 +107,14 @@
   transition: all 0.3s ease;
 }
 
+.sponsor-logo--taman-dayu img {
+  height: 124px !important;
+}
+
+.sponsor-logo--sina img {
+  height: 86px !important;
+}
+
 .sponsor-logo:hover img {
   filter: grayscale(0%);
   opacity: 1;
@@ -148,5 +156,13 @@
 
   .sponsor-logo img {
     height: 48px;
+  }
+
+  .sponsor-logo--taman-dayu img {
+    height: 62px !important;
+  }
+
+  .sponsor-logo--sina img {
+    height: 42px !important;
   }
 }

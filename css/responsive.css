@@ -402,6 +402,14 @@
     height: 30px;
   }
 
+  .footer-logos .footer-logo--taman-dayu {
+    height: 38px;
+  }
+
+  .footer-logos .footer-logo--tanrise {
+    height: 32px;
+  }
+
   .footer-socials {
     justify-content: center;
   }

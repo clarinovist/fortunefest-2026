@@ -235,6 +235,14 @@
   filter: brightness(1.5);
 }
 
+.footer-logos .footer-logo--taman-dayu {
+  height: 46px;
+}
+
+.footer-logos .footer-logo--tanrise {
+  height: 40px;
+}
+
 .footer-logos img:hover {
   opacity: 1;
 }

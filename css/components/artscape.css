@@ -115,8 +115,26 @@
   mix-blend-mode: multiply;
 }
 
+.artscape-card--dance .artscape-card-img img {
+  transform: scale(1.2) translateY(36px);
+  object-position: center bottom;
+}
+
+.artscape-card--traditional .artscape-card-img img {
+  transform: scale(1.15) translateX(18px) translateY(10px);
+  object-position: center bottom;
+}
+
 .artscape-card:hover .artscape-card-img img {
   transform: scale(1.08);
+}
+
+.artscape-card--dance:hover .artscape-card-img img {
+  transform: scale(1.26) translateY(38px);
+}
+
+.artscape-card--traditional:hover .artscape-card-img img {
+  transform: scale(1.2) translateX(20px) translateY(12px);
 }
 
 .artscape-card-img::after {

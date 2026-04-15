@@ -233,6 +233,22 @@
     height: 260px;
   }
 
+  .artscape-card--dance .artscape-card-img img {
+    transform: scale(1.14) translateY(24px);
+  }
+
+  .artscape-card--traditional .artscape-card-img img {
+    transform: scale(1.1) translateX(10px) translateY(8px);
+  }
+
+  .artscape-card--dance:hover .artscape-card-img img {
+    transform: scale(1.18) translateY(26px);
+  }
+
+  .artscape-card--traditional:hover .artscape-card-img img {
+    transform: scale(1.14) translateX(12px) translateY(10px);
+  }
+
   .artscape-card-content {
     padding: 22px 18px;
   }

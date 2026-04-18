@@ -4,9 +4,95 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ==========================================
+  // 1. NAVBAR & BACK TO TOP SCROLL EFFECT
+  // ==========================================
+  const navbar = document.querySelector('.navbar');
+  const backToTopBtn = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      if (navbar) navbar.classList.add('scrolled');
+      if (backToTopBtn) backToTopBtn.classList.add('visible');
+    } else {
+      if (navbar) navbar.classList.remove('scrolled');
+      if (backToTopBtn) backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // ==========================================
-  // 3. SMOOTH SCROLL — For anchor links
+  // 2. COUNTDOWN TIMER (Aug 16, 2026)
+  // ==========================================
+  const eventDate = new Date("Aug 16, 2026 06:00:00").getTime();
+  
+  const daysEl = document.getElementById('cd-days');
+  const hoursEl = document.getElementById('cd-hours');
+  const minsEl = document.getElementById('cd-minutes');
+  const secsEl = document.getElementById('cd-seconds');
+  
+  if (daysEl && hoursEl && minsEl) {
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      daysEl.textContent = days.toString().padStart(2, '0');
+      hoursEl.textContent = hours.toString().padStart(2, '0');
+      minsEl.textContent = minutes.toString().padStart(2, '0');
+      if (secsEl) secsEl.textContent = seconds.toString().padStart(2, '0');
+    };
+    
+    // Initial call
+    updateCountdown();
+    // Update every second
+    const countdownInterval = setInterval(updateCountdown, 1000);
+  }
+  
+  // ==========================================
+  // 3. AMBIENT PARTICLES HERO
+  // ==========================================
+  const heroSection = document.getElementById('hero');
+  if (heroSection) {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'ambient-particles';
+    heroSection.prepend(particlesContainer);
+
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.className = 'ambient-particle';
+      const size = Math.random() * 6 + 2; // 2px to 8px
+      const left = Math.random() * 100; // 0 to 100%
+      const duration = Math.random() * 10 + 10; // 10s to 20s
+      const delay = Math.random() * 5; // 0s to 5s
+      
+      p.style.width = `${size}px`;
+      p.style.height = `${size}px`;
+      p.style.left = `${left}%`;
+      p.style.animationDuration = `${duration}s`;
+      p.style.animationDelay = `${delay}s`;
+      
+      particlesContainer.appendChild(p);
+    }
+  }
+
+
+  // ==========================================
+  // 4. SMOOTH SCROLL — For anchor links
   // ==========================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -119,41 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 8. FORM — Redirect to Google Form
   // ==========================================
-  const registerForm = document.getElementById('register-form');
-
-  if (registerForm) {
-    registerForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('reg-name').value;
-      const email = document.getElementById('reg-email').value;
-      const phone = document.getElementById('reg-phone').value;
-      const category = document.getElementById('reg-category').value;
-
-      // Placeholder: Replace this URL with your Google Form URL
-      // Format: https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?usp=pp_url&entry.FIELD1=VALUE1&entry.FIELD2=VALUE2
-      const googleFormBase = `https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?usp=send_form&entry.NAME=${encodeURIComponent(name)}&entry.EMAIL=${encodeURIComponent(email)}&entry.PHONE=${encodeURIComponent(phone)}&entry.CAT=${encodeURIComponent(category)}`;
-      
-      // For now, show a success message
-      const btn = registerForm.querySelector('.btn-gold');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '✓ Terkirim! Redirecting ke Google Form...';
-      btn.style.background = 'linear-gradient(135deg, #4A7C59, #2C4A2E)';
-      btn.disabled = true;
-
-      setTimeout(() => {
-        // Reset the form
-        registerForm.reset();
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        btn.disabled = false;
-
-        // Replace 'YOUR_FORM_ID' with the actual ID later
-        window.open(googleFormBase, '_blank');
-        // alert('Terima kasih telah mendaftar!');
-      }, 2000);
-    });
-  }
+  // (Form logic has been replaced with direct links in HTML)
 
 
   // ==========================================

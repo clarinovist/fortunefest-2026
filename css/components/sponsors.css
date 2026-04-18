@@ -3,7 +3,7 @@
    ============================================ */
 .sponsors {
   position: relative;
-  background: var(--cream-paper);
+  background: var(--off-white);
   padding: 40px 0;
   text-align: center;
   overflow: hidden;
@@ -14,7 +14,7 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--brown-medium);
+  color: var(--brown-light);
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@
   content: '';
   width: 40px;
   height: 1px;
-  background: var(--brown-medium);
+  background: var(--brown-light);
   opacity: 0.3;
 }
 
@@ -52,12 +52,12 @@
 
 .sponsor-marquee::before {
   left: 0;
-  background: linear-gradient(to right, var(--cream-paper), transparent);
+  background: linear-gradient(to right, var(--off-white), transparent);
 }
 
 .sponsor-marquee::after {
   right: 0;
-  background: linear-gradient(to left, var(--cream-paper), transparent);
+  background: linear-gradient(to left, var(--off-white), transparent);
 }
 
 /* ---- Track (the sliding row) ---- */
@@ -134,7 +134,7 @@
 .sponsor-cta {
   margin-top: 20px;
   font-size: 0.85rem;
-  color: var(--brown-medium);
+  color: var(--brown-light);
 }
 
 .sponsor-cta a {
@@ -146,8 +146,8 @@
 }
 
 .sponsor-cta a:hover {
-  color: var(--gold-deep);
-  border-color: var(--gold-deep);
+  color: var(--gold-dark);
+  border-color: var(--gold-dark);
 }
 
 /* Responsive */

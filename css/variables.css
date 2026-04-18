@@ -29,8 +29,8 @@
   /* --- Typography --- */
   --font-decor:     'Runtoe', cursive;
   --font-heading:   'Runtoe', Georgia, serif;
-  --font-sub:       'Candara', 'Segoe UI', sans-serif;
-  --font-body:      'Candara', 'Helvetica Neue', sans-serif;
+  --font-sub:       'DM Sans', 'Segoe UI', sans-serif;
+  --font-body:      'DM Sans', 'Helvetica Neue', sans-serif;
 
   /* --- Spacing --- */
   --section-padding:    100px 0;

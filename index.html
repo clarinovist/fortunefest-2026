@@ -62,6 +62,23 @@
           fetchpriority="high">
       </div>
 
+      <!-- New Event Date Badge & Countdown -->
+      <div class="hero-event-info">
+        <div class="hero-date-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          16 Agustus 2026
+          <span class="badge-separator">•</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          Taman Dayu, Pasuruan
+        </div>
+        <div class="hero-countdown" id="event-countdown">
+          <div class="countdown-item"><span id="cd-days">00</span><small>HARI</small></div>
+          <div class="countdown-item"><span id="cd-hours">00</span><small>JAM</small></div>
+          <div class="countdown-item"><span id="cd-minutes">00</span><small>MENIT</small></div>
+          <div class="countdown-item"><span id="cd-seconds">00</span><small>DETIK</small></div>
+        </div>
+      </div>
+
       <div class="hero-actions">
         <a href="#register" class="btn btn-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
@@ -269,9 +286,8 @@
         </div>
       </div>
 
-      <div class="artscape-cta reveal" style="text-align: center; margin-top: 50px;">
-        <a href="#earth-market" class="btn btn-secondary btn-transparent-outline"
-          style="border-color: var(--brown-earth); color: var(--brown-earth);">
+      <div class="artscape-cta reveal">
+        <a href="#earth-market" class="btn btn-secondary">
           Lanjut ke Earth Market
         </a>
       </div>
@@ -471,34 +487,30 @@
             </svg>
             Pendaftaran
           </h3>
-          <div class="register-links" style="display: flex; flex-direction: column; gap: 14px;">
-            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.8); line-height: 1.5; margin-bottom: 8px;">Silakan
-              pilih formulir pendaftaran sesuai partisipasi Anda:</p>
+          <div class="register-links-container">
+            <p class="register-links-desc">Silakan pilih formulir pendaftaran sesuai partisipasi Anda:</p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2GysPQtB7vFIgwAOG8ROcphx8D_8W3mm_uTHfRtNlU6Kk6w/viewform"
-              target="_blank" rel="noopener noreferrer" class="btn btn-gold"
-              style="width: 100%; justify-content: center;">
+              target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" style="margin-right: 8px;">
+                stroke-width="2" stroke="currentColor" class="btn-icon">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
               </svg>
               Form Fun Run 5K
             </a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7sQAl6AU2EoLpys1IGB69xmxNM5VtQ0fOIGoCv10okZsOkQ/viewform"
-              target="_blank" rel="noopener noreferrer" class="btn btn-primary"
-              style="width: 100%; justify-content: center;">
+              target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" style="margin-right: 8px;">
+                stroke-width="2" stroke="currentColor" class="btn-icon">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0h4.64m-4.64 0V5.625c0-.621-.504-1.125-1.125-1.125H3.484C2.864 4.5 2.36 5.004 2.36 5.625v15.375m17.28 0h1.125c.621 0 1.125-.504 1.125-1.125v-8.25c0-.621-.504-1.125-1.125-1.125H16.5m-3 0h3" />
               </svg>
               Form Earth Market
             </a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCeNpEJL4_U30vp7PnsNAVxl0Kvs10wx24HWic7UaoJYdzfQ/viewform"
-              target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-transparent-outline"
-              style="width: 100%; justify-content: center;">
+              target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-full">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" style="margin-right: 8px;">
+                stroke-width="2" stroke="currentColor" class="btn-icon">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.562.562 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
               </svg>
@@ -578,7 +590,7 @@
         </p>
 
         <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/fortunefest.id/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -586,21 +598,13 @@
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
             </svg>
           </a>
-          <a href="#" class="social-link" aria-label="Facebook">
+          <a href="https://www.instagram.com/fortunefest.id/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>
-          <a href="#" class="social-link" aria-label="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-            </svg>
-          </a>
-          <a href="#" class="social-link" aria-label="WhatsApp">
+          <a href="https://wa.me/6281219000422" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -612,6 +616,13 @@
     </div>
   </section>
 
+
+  <!-- Floating Back to Top Button -->
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </a>
 
   <!-- JavaScript -->
   <script src="script.js?v=2"></script>

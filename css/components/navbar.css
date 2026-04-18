@@ -87,18 +87,22 @@
   font-size: 0.85rem;
 }
 
+/* Hamburger Button — hidden on desktop */
+.navbar-hamburger {
+  display: none;
+}
+
 /* Responsive adjustment for small screens */
 @media (max-width: 768px) {
   .navbar {
-    padding: 8px 4%;
+    padding: 10px 5%;
   }
 
   .navbar-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 8px;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
   }
 
   .navbar-logo {
@@ -109,37 +113,88 @@
     display: none;
   }
 
-  .navbar-menu {
+  /* Hamburger button */
+  .navbar-hamburger {
     display: flex;
-    flex: 1;
-    gap: 14px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    padding: 0 4px;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .navbar-menu::-webkit-scrollbar {
-    display: none;
-  }
-
-  .navbar-menu li {
-    flex: 0 0 auto;
-  }
-
-  .navbar-menu li a {
-    font-size: 0.78rem;
-    white-space: nowrap;
-  }
-
-  .navbar-actions {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1002;
     flex-shrink: 0;
   }
 
-  .navbar-actions .btn {
-    padding: 7px 12px;
-    font-size: 0.75rem;
+  .navbar-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--gold-light);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Animated X when active */
+  .navbar-hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .navbar-hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .navbar-hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile menu — hidden by default */
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    right: -5%;
+    background: rgba(30, 22, 14, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-top: 1px solid rgba(212, 169, 52, 0.15);
+    border-bottom: 1px solid rgba(212, 169, 52, 0.10);
+    z-index: 1001;
+  }
+
+  /* Open state */
+  .navbar-menu.open {
+    max-height: 400px;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    flex: none;
+  }
+
+  .navbar-menu li a {
+    display: block;
+    padding: 16px 24px;
+    font-size: 0.95rem;
     white-space: nowrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--cream-bg);
+  }
+
+  .navbar-menu li a:hover {
+    background: rgba(212, 169, 52, 0.08);
+    color: var(--gold-light);
+    padding-left: 30px;
+  }
+
+  /* Hide desktop action button — accessible via menu */
+  .navbar-actions {
+    display: none;
   }
 }

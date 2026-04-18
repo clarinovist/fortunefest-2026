@@ -27,6 +27,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
+  // 1b. HAMBURGER MENU TOGGLE (mobile)
+  // ==========================================
+  const hamburger = document.getElementById('navHamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a nav link is clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navbar?.contains(e.target)) {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // ==========================================
   // 2. COUNTDOWN TIMER (Aug 16, 2026)
   // ==========================================
   const eventDate = new Date("Aug 16, 2026 06:00:00").getTime();

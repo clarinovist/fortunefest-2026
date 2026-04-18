@@ -135,6 +135,18 @@
   opacity: 0.94;
 }
 
+.sponsor-logo--tyeso img {
+  height: 64px !important;
+  filter: grayscale(15%);
+  opacity: 0.85;
+}
+
+.sponsor-logo--azra img {
+  height: 68px !important;
+  filter: grayscale(10%);
+  opacity: 0.88;
+}
+
 .sponsor-logo:hover img {
   filter: grayscale(0%);
   opacity: 1;

@@ -118,7 +118,7 @@
 }
 
 .sponsor-logo--taman-dayu img {
-  height: 148px !important;
+  height: 180px !important;
   filter: grayscale(8%);
   opacity: 0.92;
 }
@@ -130,7 +130,7 @@
 }
 
 .sponsor-logo--sina img {
-  height: 108px !important;
+  height: 140px !important;
   filter: grayscale(6%);
   opacity: 0.94;
 }
@@ -195,7 +195,7 @@
   }
 
   .sponsor-logo--taman-dayu img {
-    height: 72px !important;
+    height: 96px !important;
   }
 
   .sponsor-logo--tanrise img {
@@ -203,7 +203,7 @@
   }
 
   .sponsor-logo--sina img {
-    height: 54px !important;
+    height: 80px !important;
   }
 
   .sponsor-cta {
@@ -223,7 +223,7 @@
   }
 
   .sponsor-logo--taman-dayu img {
-    height: 62px !important;
+    height: 84px !important;
   }
 
   .sponsor-logo--tanrise img {
@@ -231,6 +231,6 @@
   }
 
   .sponsor-logo--sina img {
-    height: 50px !important;
+    height: 70px !important;
   }
 }

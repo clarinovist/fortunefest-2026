@@ -3,10 +3,16 @@
    ============================================ */
 .sponsors {
   position: relative;
-  background: var(--off-white);
-  padding: 40px 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(212, 169, 52, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse at 0% 100%, rgba(107, 68, 35, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(107, 68, 35, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, var(--cream-light) 0%, var(--cream-bg) 50%, var(--sand) 100%);
+  padding: 48px 0;
   text-align: center;
   overflow: hidden;
+  border-top: 1px solid rgba(212, 169, 52, 0.20);
+  border-bottom: 1px solid rgba(212, 169, 52, 0.20);
 }
 
 .sponsors-label {
@@ -14,8 +20,8 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--brown-light);
-  margin-bottom: 24px;
+  color: var(--brown-earth);
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,10 +31,14 @@
 .sponsors-label::before,
 .sponsors-label::after {
   content: '';
-  width: 40px;
+  width: 48px;
   height: 1px;
-  background: var(--brown-light);
-  opacity: 0.3;
+  background: linear-gradient(to right, transparent, var(--gold-dark));
+  opacity: 0.5;
+}
+
+.sponsors-label::after {
+  background: linear-gradient(to left, transparent, var(--gold-dark));
 }
 
 /* ---- Marquee Container ---- */
@@ -52,12 +62,12 @@
 
 .sponsor-marquee::before {
   left: 0;
-  background: linear-gradient(to right, var(--off-white), transparent);
+  background: linear-gradient(to right, var(--cream-light), transparent);
 }
 
 .sponsor-marquee::after {
   right: 0;
-  background: linear-gradient(to left, var(--off-white), transparent);
+  background: linear-gradient(to left, var(--sand), transparent);
 }
 
 /* ---- Track (the sliding row) ---- */
@@ -132,22 +142,23 @@
 
 /* ---- CTA line ---- */
 .sponsor-cta {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 0.85rem;
-  color: var(--brown-light);
+  color: var(--brown-earth);
 }
 
 .sponsor-cta a {
-  color: var(--brown-earth);
-  font-weight: 600;
+  color: var(--green-dark);
+  font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px dashed var(--brown-earth);
+  border-bottom: 1px dashed var(--gold-dark);
   transition: all 0.3s ease;
+  padding-bottom: 1px;
 }
 
 .sponsor-cta a:hover {
   color: var(--gold-dark);
-  border-color: var(--gold-dark);
+  border-color: var(--gold-accent);
 }
 
 /* Responsive */

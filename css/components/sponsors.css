@@ -148,7 +148,7 @@
 }
 
 .sponsor-logo--francoville img {
-  height: 90px !important;
+  height: 140px !important;
   filter: none;
   opacity: 0.95;
 }
@@ -228,6 +228,10 @@
 
   .sponsor-logo--sina img {
     height: 80px !important;
+  }
+
+  .sponsor-logo--francoville img {
+    height: 70px !important;
   }
 
   .sponsor-cta {

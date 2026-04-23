@@ -147,6 +147,18 @@
   opacity: 0.88;
 }
 
+.sponsor-logo--francoville img {
+  height: 90px !important;
+  filter: none;
+  opacity: 0.95;
+}
+
+.sponsor-logo--sparko img {
+  height: 110px !important;
+  filter: none;
+  opacity: 1;
+}
+
 .sponsor-logo:hover img {
   filter: grayscale(0%);
   opacity: 1;
@@ -202,7 +214,7 @@
     height: 48px;
   }
 
-  .sponsor-track .sponsor-logo:nth-child(n + 7) {
+  .sponsor-track .sponsor-logo:nth-child(n + 9) {
     display: none;
   }
 

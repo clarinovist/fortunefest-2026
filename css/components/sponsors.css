@@ -172,8 +172,8 @@
 }
 
 .sponsor-logo--smk img {
-  max-height: 72px;
-  max-width: 208px;
+  max-height: 96px;
+  max-width: 240px;
   filter: grayscale(10%);
   opacity: 0.9;
 }
@@ -272,14 +272,14 @@
     max-height: 66px;
   }
 
-  .sponsor-logo--smk img,
+  .sponsor-logo--smk img {
+    max-height: 64px;
+    max-width: 156px;
+  }
+
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img {
     max-height: 54px;
-  }
-
-  .sponsor-logo--smk img {
-    max-width: 120px;
   }
 
   .sponsor-logo--sparko img {
@@ -321,7 +321,11 @@
     max-height: 60px;
   }
 
-  .sponsor-logo--smk img,
+  .sponsor-logo--smk img {
+    max-height: 52px;
+    max-width: 130px;
+  }
+
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img {
     max-height: 46px;

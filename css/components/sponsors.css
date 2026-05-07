@@ -99,7 +99,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  padding: 8px 16px;
+  width: 220px;
+  min-height: 124px;
+  padding: 10px 16px;
   transition: all 0.3s ease;
 }
 
@@ -108,9 +110,10 @@
 }
 
 .sponsor-logo img {
-  height: 100px !important;
-  width: auto !important;
-  max-width: none;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 96px;
   object-fit: contain;
   filter: grayscale(20%);
   opacity: 0.75;
@@ -118,51 +121,73 @@
 }
 
 .sponsor-logo--inla img {
-  height: 160px !important;
+  max-height: 110px;
   filter: grayscale(5%);
   opacity: 0.95;
 }
 
 .sponsor-logo--taman-dayu img {
-  height: 180px !important;
+  max-height: 118px;
   filter: grayscale(8%);
   opacity: 0.92;
 }
 
 .sponsor-logo--tanrise img {
-  height: 112px !important;
+  max-height: 82px;
+  max-width: 188px;
   filter: none;
   opacity: 1;
 }
 
 .sponsor-logo--sina img {
-  height: 140px !important;
+  max-height: 102px;
   filter: grayscale(6%);
   opacity: 0.94;
 }
 
 .sponsor-logo--tyeso img {
-  height: 64px !important;
+  max-height: 62px;
+  max-width: 172px;
   filter: grayscale(15%);
   opacity: 0.85;
 }
 
 .sponsor-logo--azra img {
-  height: 68px !important;
+  max-height: 68px;
+  max-width: 168px;
   filter: grayscale(10%);
   opacity: 0.88;
 }
 
 .sponsor-logo--francoville img {
-  height: 280px !important;
+  max-height: 110px;
   filter: none;
   opacity: 1;
 }
 
 .sponsor-logo--sparko img {
-  height: 160px !important;
+  max-height: 108px;
   filter: none;
   opacity: 1;
+}
+
+.sponsor-logo--smk img {
+  max-height: 72px;
+  max-width: 208px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
+.sponsor-logo--lavenka img {
+  max-height: 98px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
+.sponsor-logo--rsm-contour img {
+  max-height: 98px;
+  filter: grayscale(10%);
+  opacity: 0.9;
 }
 
 .sponsor-logo:hover img {
@@ -213,35 +238,52 @@
   .sponsor-logo {
     width: calc(33.333% - 8px);
     min-width: 92px;
+    min-height: 78px;
     padding: 8px 6px;
   }
 
   .sponsor-logo img {
-    height: 48px;
+    max-height: 52px;
+    max-width: 100%;
   }
 
-  .sponsor-track .sponsor-logo:nth-child(n + 9) {
+  .sponsor-track .sponsor-logo:nth-child(n + 12) {
     display: none;
   }
 
   .sponsor-logo--taman-dayu img {
-    height: 96px !important;
+    max-height: 70px;
   }
 
   .sponsor-logo--tanrise img {
-    height: 56px !important;
+    max-height: 48px;
+    max-width: 110px;
   }
 
   .sponsor-logo--sina img {
-    height: 80px !important;
+    max-height: 64px;
   }
 
   .sponsor-logo--francoville img {
-    height: 120px !important;
+    max-height: 74px;
   }
 
   .sponsor-logo--inla img {
-    height: 80px !important;
+    max-height: 66px;
+  }
+
+  .sponsor-logo--smk img,
+  .sponsor-logo--lavenka img,
+  .sponsor-logo--rsm-contour img {
+    max-height: 54px;
+  }
+
+  .sponsor-logo--smk img {
+    max-width: 120px;
+  }
+
+  .sponsor-logo--sparko img {
+    max-height: 66px;
   }
 
   .sponsor-cta {
@@ -257,18 +299,31 @@
   }
 
   .sponsor-logo img {
-    height: 44px;
+    max-height: 44px;
   }
 
   .sponsor-logo--taman-dayu img {
-    height: 84px !important;
+    max-height: 62px;
   }
 
   .sponsor-logo--tanrise img {
-    height: 50px !important;
+    max-height: 42px;
+    max-width: 102px;
   }
 
   .sponsor-logo--sina img {
-    height: 70px !important;
+    max-height: 58px;
+  }
+
+  .sponsor-logo--francoville img,
+  .sponsor-logo--inla img,
+  .sponsor-logo--sparko img {
+    max-height: 60px;
+  }
+
+  .sponsor-logo--smk img,
+  .sponsor-logo--lavenka img,
+  .sponsor-logo--rsm-contour img {
+    max-height: 46px;
   }
 }

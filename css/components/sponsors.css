@@ -190,6 +190,14 @@
   opacity: 0.9;
 }
 
+.sponsor-logo--ttd-tjoe-tik-kiong img,
+.sponsor-logo--paroki-antonius-padua img,
+.sponsor-logo--st-antonius-padua img {
+  max-height: 112px;
+  filter: grayscale(8%);
+  opacity: 0.92;
+}
+
 .sponsor-logo:hover img {
   filter: grayscale(0%);
   opacity: 1;
@@ -247,7 +255,7 @@
     max-width: 100%;
   }
 
-  .sponsor-track .sponsor-logo:nth-child(n + 12) {
+  .sponsor-track .sponsor-logo:nth-child(n + 15) {
     display: none;
   }
 
@@ -284,6 +292,12 @@
 
   .sponsor-logo--sparko img {
     max-height: 66px;
+  }
+
+  .sponsor-logo--ttd-tjoe-tik-kiong img,
+  .sponsor-logo--paroki-antonius-padua img,
+  .sponsor-logo--st-antonius-padua img {
+    max-height: 64px;
   }
 
   .sponsor-cta {
@@ -329,5 +343,11 @@
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img {
     max-height: 46px;
+  }
+
+  .sponsor-logo--ttd-tjoe-tik-kiong img,
+  .sponsor-logo--paroki-antonius-padua img,
+  .sponsor-logo--st-antonius-padua img {
+    max-height: 58px;
   }
 }

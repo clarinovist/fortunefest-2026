@@ -196,9 +196,18 @@
   opacity: 0.9;
 }
 
+.sponsor-logo--playon-malang img {
+  max-height: 84px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
 .sponsor-logo--ttd-tjoe-tik-kiong img,
 .sponsor-logo--paroki-antonius-padua img,
-.sponsor-logo--st-antonius-padua img {
+.sponsor-logo--st-antonius-padua img,
+.sponsor-logo--vihara-paramitta img,
+.sponsor-logo--gusdurian-pasuruan img,
+.sponsor-logo--mapanbumi img {
   max-height: 112px;
   filter: grayscale(8%);
   opacity: 0.92;
@@ -261,7 +270,7 @@
     max-width: 100%;
   }
 
-  .sponsor-track .sponsor-logo:nth-child(n + 16) {
+  .sponsor-track .sponsor-logo:nth-child(n + 20) {
     display: none;
   }
 
@@ -293,7 +302,8 @@
 
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img,
-  .sponsor-logo--ya img {
+  .sponsor-logo--ya img,
+  .sponsor-logo--playon-malang img {
     max-height: 54px;
   }
 
@@ -303,7 +313,10 @@
 
   .sponsor-logo--ttd-tjoe-tik-kiong img,
   .sponsor-logo--paroki-antonius-padua img,
-  .sponsor-logo--st-antonius-padua img {
+  .sponsor-logo--st-antonius-padua img,
+  .sponsor-logo--vihara-paramitta img,
+  .sponsor-logo--gusdurian-pasuruan img,
+  .sponsor-logo--mapanbumi img {
     max-height: 64px;
   }
 
@@ -349,13 +362,17 @@
 
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img,
-  .sponsor-logo--ya img {
+  .sponsor-logo--ya img,
+  .sponsor-logo--playon-malang img {
     max-height: 46px;
   }
 
   .sponsor-logo--ttd-tjoe-tik-kiong img,
   .sponsor-logo--paroki-antonius-padua img,
-  .sponsor-logo--st-antonius-padua img {
+  .sponsor-logo--st-antonius-padua img,
+  .sponsor-logo--vihara-paramitta img,
+  .sponsor-logo--gusdurian-pasuruan img,
+  .sponsor-logo--mapanbumi img {
     max-height: 58px;
   }
 }

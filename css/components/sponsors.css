@@ -242,73 +242,82 @@
 /* Responsive */
 @media (max-width: 768px) {
   .sponsors {
-    padding: 28px 0;
+    padding: 32px 0;
   }
 
+  /* Beautiful gradient fade edges on mobile */
   .sponsor-marquee::before,
   .sponsor-marquee::after {
-    display: none;
+    display: block;
+    width: 48px;
   }
 
+  .sponsor-marquee::before {
+    background: linear-gradient(to right, var(--cream-light), transparent);
+  }
+
+  .sponsor-marquee::after {
+    background: linear-gradient(to left, var(--sand), transparent);
+  }
+
+  /* Infinite loop marquee track for mobile */
   .sponsor-track {
-    width: 100%;
-    animation: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px 12px;
+    width: max-content;
+    animation: marquee-scroll 24s linear infinite;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 28px;
   }
 
+  /* Single row logo sizing on mobile */
   .sponsor-logo {
-    width: calc(33.333% - 8px);
-    min-width: 92px;
-    min-height: 78px;
-    padding: 8px 6px;
+    width: 140px;
+    min-width: 140px;
+    min-height: 80px;
+    padding: 6px 10px;
   }
 
   .sponsor-logo img {
-    max-height: 52px;
+    max-height: 48px;
     max-width: 100%;
   }
 
-  .sponsor-track .sponsor-logo:nth-child(n + 20) {
-    display: none;
-  }
-
+  /* Specific sizing adjustments for consistent look on tablet */
   .sponsor-logo--taman-dayu img {
-    max-height: 70px;
+    max-height: 56px;
   }
 
   .sponsor-logo--tanrise img {
-    max-height: 48px;
-    max-width: 110px;
+    max-height: 38px;
+    max-width: 120px;
   }
 
   .sponsor-logo--sina img {
-    max-height: 64px;
+    max-height: 48px;
   }
 
   .sponsor-logo--francoville img {
-    max-height: 88px;
+    max-height: 60px;
   }
 
   .sponsor-logo--inla img {
-    max-height: 66px;
+    max-height: 52px;
   }
 
   .sponsor-logo--smk img {
-    max-height: 64px;
-    max-width: 156px;
+    max-height: 46px;
+    max-width: 120px;
   }
 
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img,
   .sponsor-logo--ya img,
   .sponsor-logo--playon-malang img {
-    max-height: 54px;
+    max-height: 42px;
   }
 
   .sponsor-logo--sparko img {
-    max-height: 66px;
+    max-height: 50px;
   }
 
   .sponsor-logo--ttd-tjoe-tik-kiong img,
@@ -317,54 +326,70 @@
   .sponsor-logo--vihara-paramitta img,
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img {
-    max-height: 64px;
+    max-height: 48px;
   }
 
   .sponsor-cta {
-    margin-top: 16px;
-    padding: 0 18px;
+    margin-top: 20px;
+    padding: 0 16px;
     line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
+  /* Smaller spacing and size on smartphones */
+  .sponsor-track {
+    gap: 20px;
+    animation-duration: 20s; /* slightly faster travel time for smaller track */
+  }
+
   .sponsor-logo {
-    width: calc(50% - 8px);
+    width: 110px;
+    min-width: 110px;
+    min-height: 70px;
+    padding: 4px 6px;
   }
 
   .sponsor-logo img {
-    max-height: 44px;
+    max-height: 38px;
   }
 
+  /* Specific sizing adjustments for consistent look on small mobile */
   .sponsor-logo--taman-dayu img {
-    max-height: 62px;
+    max-height: 46px;
   }
 
   .sponsor-logo--tanrise img {
-    max-height: 42px;
-    max-width: 102px;
+    max-height: 30px;
+    max-width: 90px;
   }
 
   .sponsor-logo--sina img {
-    max-height: 58px;
+    max-height: 38px;
   }
 
-  .sponsor-logo--francoville img,
-  .sponsor-logo--inla img,
-  .sponsor-logo--sparko img {
-    max-height: 72px;
+  .sponsor-logo--francoville img {
+    max-height: 46px;
+  }
+
+  .sponsor-logo--inla img {
+    max-height: 42px;
   }
 
   .sponsor-logo--smk img {
-    max-height: 52px;
-    max-width: 130px;
+    max-height: 36px;
+    max-width: 100px;
   }
 
   .sponsor-logo--lavenka img,
   .sponsor-logo--rsm-contour img,
   .sponsor-logo--ya img,
   .sponsor-logo--playon-malang img {
-    max-height: 46px;
+    max-height: 32px;
+  }
+
+  .sponsor-logo--sparko img {
+    max-height: 40px;
   }
 
   .sponsor-logo--ttd-tjoe-tik-kiong img,
@@ -373,6 +398,6 @@
   .sponsor-logo--vihara-paramitta img,
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img {
-    max-height: 58px;
+    max-height: 38px;
   }
 }

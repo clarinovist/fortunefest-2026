@@ -152,6 +152,13 @@
   opacity: 0.85;
 }
 
+.sponsor-logo--jt-express img {
+  max-height: 52px;
+  max-width: 170px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
 .sponsor-logo--azra img {
   max-height: 68px;
   max-width: 168px;
@@ -292,6 +299,10 @@
     max-width: 120px;
   }
 
+  .sponsor-logo--jt-express img {
+    max-height: 32px;
+  }
+
   .sponsor-logo--sina img {
     max-height: 48px;
   }
@@ -362,6 +373,10 @@
   .sponsor-logo--tanrise img {
     max-height: 30px;
     max-width: 90px;
+  }
+
+  .sponsor-logo--jt-express img {
+    max-height: 26px;
   }
 
   .sponsor-logo--sina img {

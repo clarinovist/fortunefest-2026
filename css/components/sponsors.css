@@ -215,7 +215,8 @@
 .sponsor-logo--vihara-paramitta img,
 .sponsor-logo--gusdurian-pasuruan img,
 .sponsor-logo--mapanbumi img,
-.sponsor-logo--jangkar img {
+.sponsor-logo--jangkar img,
+.sponsor-logo--pagoda img {
   max-height: 112px;
   filter: grayscale(8%);
   opacity: 0.92;
@@ -338,7 +339,8 @@
   .sponsor-logo--vihara-paramitta img,
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img,
-  .sponsor-logo--jangkar img {
+  .sponsor-logo--jangkar img,
+  .sponsor-logo--pagoda img {
     max-height: 48px;
   }
 
@@ -415,7 +417,8 @@
   .sponsor-logo--vihara-paramitta img,
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img,
-  .sponsor-logo--jangkar img {
+  .sponsor-logo--jangkar img,
+  .sponsor-logo--pagoda img {
     max-height: 38px;
   }
 }

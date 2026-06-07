@@ -209,6 +209,19 @@
   opacity: 0.9;
 }
 
+.sponsor-logo--giant-star img {
+  max-height: 58px;
+  max-width: 180px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
+.sponsor-logo--harmony img {
+  max-height: 76px;
+  filter: grayscale(10%);
+  opacity: 0.9;
+}
+
 .sponsor-logo--ttd-tjoe-tik-kiong img,
 .sponsor-logo--paroki-antonius-padua img,
 .sponsor-logo--st-antonius-padua img,
@@ -329,6 +342,14 @@
     max-height: 42px;
   }
 
+  .sponsor-logo--giant-star img {
+    max-height: 34px;
+  }
+
+  .sponsor-logo--harmony img {
+    max-height: 42px;
+  }
+
   .sponsor-logo--sparko img {
     max-height: 50px;
   }
@@ -405,6 +426,14 @@
   .sponsor-logo--ya img,
   .sponsor-logo--playon-malang img {
     max-height: 32px;
+  }
+
+  .sponsor-logo--giant-star img {
+    max-height: 28px;
+  }
+
+  .sponsor-logo--harmony img {
+    max-height: 36px;
   }
 
   .sponsor-logo--sparko img {

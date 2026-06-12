@@ -230,7 +230,9 @@
 .sponsor-logo--mapanbumi img,
 .sponsor-logo--jangkar img,
 .sponsor-logo--pagoda img,
-.sponsor-logo--sapindo img {
+.sponsor-logo--sapindo img,
+.sponsor-logo--dharma-budaya img,
+.sponsor-logo--keivan-bros img {
   max-height: 112px;
   filter: grayscale(8%);
   opacity: 0.92;
@@ -362,7 +364,9 @@
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img,
   .sponsor-logo--jangkar img,
-  .sponsor-logo--pagoda img {
+  .sponsor-logo--pagoda img,
+  .sponsor-logo--dharma-budaya img,
+  .sponsor-logo--keivan-bros img {
     max-height: 48px;
   }
 
@@ -448,7 +452,9 @@
   .sponsor-logo--gusdurian-pasuruan img,
   .sponsor-logo--mapanbumi img,
   .sponsor-logo--jangkar img,
-  .sponsor-logo--pagoda img {
+  .sponsor-logo--pagoda img,
+  .sponsor-logo--dharma-budaya img,
+  .sponsor-logo--keivan-bros img {
     max-height: 38px;
   }
 }

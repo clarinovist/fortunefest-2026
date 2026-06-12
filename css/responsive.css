@@ -162,6 +162,16 @@
     max-width: 320px;
   }
 
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    font-size: 0.95rem;
+    padding: 14px 28px;
+  }
+
+  .hero-explore {
+    margin-top: 16px;
+  }
+
   .hero-scroll {
     display: none;
   }
@@ -298,6 +308,20 @@
     padding: 10px 12px;
     font-size: 0.8rem;
     line-height: 1.6;
+  }
+
+  .funrun-info-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .funrun-info-card {
+    padding: 14px 8px;
+  }
+
+  .funrun-info-value {
+    font-size: 1rem;
   }
 
   .funrun-features {
@@ -513,5 +537,59 @@
     width: 160px;
     height: 240px;
     right: -10px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION — Accessibility (WCAG)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all scroll-triggered reveal animations */
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* Disable hero floating animation */
+  .hero-main-logo {
+    animation: none;
+  }
+
+  /* Disable scroll indicator animation */
+  .scroll-mouse::before {
+    animation: none;
+  }
+
+  /* Disable marquee scroll */
+  .sponsor-track {
+    animation: none;
+  }
+
+  /* Disable floating badge animation */
+  .funrun-badge {
+    animation: none;
+  }
+
+  /* Disable ambient particles */
+  .ambient-particle {
+    animation: none;
+    display: none;
+  }
+
+  /* Disable tenant badge pulse */
+  .tenant-badge-dot {
+    animation: none;
+  }
+
+  /* Reduce all transitions to instant */
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

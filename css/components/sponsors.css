@@ -21,11 +21,25 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--brown-earth);
-  margin-bottom: 28px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
+
+.sponsors-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.sponsors-subtitle {
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .sponsors-label::before,

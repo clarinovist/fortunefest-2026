@@ -5,13 +5,14 @@
 
 /* Components */
 @import url('css/components/navbar.css?v=7');
-@import url('css/components/hero.css?v=4');
+@import url('css/components/hero.css?v=5');
+@import url('css/components/overview.css?v=1');
 @import url('css/components/divider.css?v=4');
 @import url('css/components/earth-market.css?v=4');
-@import url('css/components/artscape.css?v=6');
-@import url('css/components/funrun.css?v=6');
-@import url('css/components/sponsors.css?v=19');
-@import url('css/components/footer.css?v=10');
+@import url('css/components/artscape.css?v=7');
+@import url('css/components/funrun.css?v=7');
+@import url('css/components/sponsors.css?v=20');
+@import url('css/components/footer.css?v=11');
 
 /* Responsive */
-@import url('css/responsive.css?v=5');
+@import url('css/responsive.css?v=6');

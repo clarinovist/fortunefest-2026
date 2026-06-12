@@ -19,7 +19,7 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 
 <body>
@@ -89,7 +89,17 @@
       </div>
 
       <div class="hero-actions">
-        <a href="#funrun" class="btn btn-secondary btn-transparent-outline">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2GysPQtB7vFIgwAOG8ROcphx8D_8W3mm_uTHfRtNlU6Kk6w/viewform"
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-hero-primary">
+          Daftar Fun Run 5K
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7sQAl6AU2EoLpys1IGB69xmxNM5VtQ0fOIGoCv10okZsOkQ/viewform"
+          target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-hero-secondary">
+          Daftarkan Tenant
+        </a>
+      </div>
+      <div class="hero-explore">
+        <a href="#funrun" class="hero-explore-link">
           Jelajahi Acara ↓
         </a>
       </div>
@@ -102,7 +112,43 @@
     </div>
   </section>
 
-  <!-- Heritage Divider: Hero → Fun Run -->
+  <!-- ============================
+       EVENT OVERVIEW STRIP
+       ============================ -->
+  <section class="overview-strip" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <a href="#funrun" class="overview-card reveal delay-1">
+          <div class="overview-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/></svg>
+          </div>
+          <h3>Fortune Fun Run 5K</h3>
+          <p>Lari pagi 5K di kawasan Taman Dayu dengan rute bernuansa hijau dan terbuka</p>
+          <span class="overview-card-cta">Info Fun Run →</span>
+        </a>
+
+        <a href="#artscape" class="overview-card reveal delay-2">
+          <div class="overview-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>
+          </div>
+          <h3>Expression Artscape</h3>
+          <p>Senam, tari, dan lomba tradisional untuk keluarga dan komunitas</p>
+          <span class="overview-card-cta">Info Artscape →</span>
+        </a>
+
+        <a href="#earth-market" class="overview-card reveal delay-3">
+          <div class="overview-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Earth Market</h3>
+          <p>Tenant vegetarian, UMKM, craft, pet lovers, dan wellness community</p>
+          <span class="overview-card-cta">Info Earth Market →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Divider: Overview → Fun Run -->
   <div class="heritage-divider"></div>
 
 
@@ -143,6 +189,26 @@
         </div>
 
         <div class="funrun-details reveal-left">
+          <!-- Quick Info Cards -->
+          <div class="funrun-info-cards">
+            <div class="funrun-info-card">
+              <span class="funrun-info-value">5K</span>
+              <span class="funrun-info-label">Rute</span>
+            </div>
+            <div class="funrun-info-card">
+              <span class="funrun-info-value">06.00</span>
+              <span class="funrun-info-label">WIB Start</span>
+            </div>
+            <div class="funrun-info-card">
+              <span class="funrun-info-value">1.000</span>
+              <span class="funrun-info-label">Peserta</span>
+            </div>
+            <div class="funrun-info-card">
+              <span class="funrun-info-value">Taman Dayu</span>
+              <span class="funrun-info-label">Lokasi</span>
+            </div>
+          </div>
+
           <!-- Stats -->
           <div class="funrun-stats">
             <div class="stat-item">
@@ -314,6 +380,11 @@
           <span class="ornament-line"></span>
         </div>
 
+        <div class="tenant-badge-open">
+          <span class="tenant-badge-dot"></span>
+          Pendaftaran Tenant Dibuka
+        </div>
+
         <div class="section-label">
           <span class="label-line"></span>
           Fortune Earth Market
@@ -389,7 +460,10 @@
        SPONSORS SECTION
        ============================ -->
   <section class="sponsors" id="sponsors">
-    <div class="sponsors-label">Didukung Oleh</div>
+    <div class="sponsors-header">
+      <div class="sponsors-label">Partner & Komunitas Pendukung</div>
+      <p class="sponsors-subtitle">Kolaborasi lintas komunitas untuk menghadirkan festival yang sehat, hangat, dan inklusif</p>
+    </div>
 
     <div class="sponsor-marquee">
       <div class="sponsor-track">

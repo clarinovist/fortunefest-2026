@@ -200,6 +200,85 @@
   justify-content: center;
 }
 
+/* --- Sold Out Badge --- */
+.sold-out-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sold-out-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: rgba(122, 111, 99, 0.12);
+  border: 2px solid rgba(122, 111, 99, 0.35);
+  border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.0rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245, 236, 215, 0.65);
+  cursor: not-allowed;
+  text-decoration: none;
+  box-shadow: none;
+  position: relative;
+}
+
+.sold-out-badge .sold-out-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  flex-shrink: 0;
+  animation: soldOutPulse 2s ease-in-out infinite;
+}
+
+@keyframes soldOutPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.sold-out-link {
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: rgba(245, 236, 215, 0.7);
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 169, 52, 0.4);
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.sold-out-link:hover {
+  color: var(--gold-accent);
+  text-decoration-color: var(--gold-accent);
+}
+
+/* Light background variant (footer / light sections) */
+.sold-out-badge--light {
+  background: rgba(122, 111, 99, 0.08);
+  border-color: rgba(122, 111, 99, 0.25);
+  color: var(--text-muted);
+}
+
+.sold-out-badge--light .sold-out-dot {
+  background: var(--terracotta);
+  opacity: 0.7;
+}
+
+.sold-out-link--light {
+  color: var(--text-muted);
+  text-decoration-color: rgba(122, 111, 99, 0.3);
+}
+
+.sold-out-link--light:hover {
+  color: var(--terracotta);
+  text-decoration-color: var(--terracotta);
+}
+
 /* Floating Back to Top Button */
 .back-to-top {
   position: fixed;

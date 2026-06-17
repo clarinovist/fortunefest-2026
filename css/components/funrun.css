@@ -5,7 +5,7 @@
   padding: 100px 0;
   background: 
     linear-gradient(to right, rgba(16, 35, 23, 0.70) 0%, rgba(16, 35, 23, 0.40) 100%),
-    url('../../assets/img/funrun-bg.png') repeat center center;
+    url('../../assets/img/bg/funrun-bg.png') repeat center center;
   background-size: auto, 500px;
   position: relative;
   overflow: hidden;

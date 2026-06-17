@@ -6,7 +6,7 @@
   background:
     linear-gradient(180deg, rgba(255, 243, 214, 0.58) 0%, rgba(233, 244, 226, 0.42) 54%, rgba(213, 233, 205, 0.52) 100%),
     linear-gradient(120deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 220, 140, 0.08) 100%),
-    url('../../assets/img/festival-banner.jpeg');
+    url('../../assets/img/illustrations/festival-banner.jpeg');
   background-size: cover, cover, cover;
   background-position: center, center, center;
   position: relative;
@@ -162,8 +162,8 @@
 }
 
 .market-card {
-  background-color: rgba(255, 251, 243, 0.94);
-  background-image: url('../../assets/img/craft-texture.png');
+  background-color: rgba(255, 255, 251, 0.94);
+  background-image: url('../../assets/img/bg/craft-texture.png');
   background-size: 300px;
   background-blend-mode: multiply;
   border-radius: 8px;
@@ -232,6 +232,67 @@
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.market-card-tenants {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(168, 126, 52, 0.25);
+}
+
+.tenant-logo-item {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--cream-light, #fdfbf7);
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-dark, #8a6d1c);
+  box-shadow: 0 2px 8px rgba(118, 95, 45, 0.15);
+  margin-left: -10px;
+  position: relative;
+  transition: transform 0.2s ease, z-index 0.2s ease;
+  overflow: hidden;
+}
+
+.tenant-logo-item:first-child {
+  margin-left: 0;
+}
+
+.tenant-logo-item:hover {
+  transform: translateY(-3px);
+  z-index: 10;
+}
+
+.tenant-logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tenant-logo-more {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--gold-accent, #d4a934);
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(118, 95, 45, 0.15);
+  margin-left: -10px;
+  z-index: 5;
 }
 
 .earth-market-cta {

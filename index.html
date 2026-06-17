@@ -418,12 +418,12 @@
           </div>
           <h3>Vegetarian</h3>
           <p>Tenant makanan dan minuman berbasis nabati dengan pilihan menu yang ringan dan ramah keluarga</p>
-          <div class="market-card-tenants">
+          <div class="market-card-tenants" data-category="vegetarian">
             <div class="tenant-logo-item" title="AR Farm"><img src="assets/img/tenants/Vegetarian/ar-farm.jpg" alt="AR Farm" loading="lazy"></div>
             <div class="tenant-logo-item" title="Assi Korean Food"><img src="assets/img/tenants/Vegetarian/assi-korean-food.jpg" alt="Assi Korean Food" loading="lazy"></div>
             <div class="tenant-logo-item" title="Azra Fit Center"><img src="assets/img/tenants/Vegetarian/azra-fit-center.jpg" alt="Azra Fit Center" loading="lazy"></div>
             <div class="tenant-logo-item" title="Dona Clara"><img src="assets/img/tenants/Vegetarian/dona-clara.jpg" alt="Dona Clara" loading="lazy"></div>
-            <div class="tenant-logo-more" title="Lihat 16 tenant lainnya">+16</div>
+            <div class="tenant-logo-more" title="Lihat semua tenant">+16</div>
           </div>
         </div>
 
@@ -433,7 +433,7 @@
           </div>
           <h3>UMKM</h3>
           <p>Ruang tampil bagi pelaku usaha lokal dengan produk kurasi yang relevan untuk suasana festival</p>
-          <div class="market-card-tenants">
+          <div class="market-card-tenants" data-category="umkm">
             <div class="tenant-logo-item" title="Hime"><img src="assets/img/tenants/UMKM/Hime.jpg" alt="Hime" loading="lazy"></div>
             <div class="tenant-logo-item" title="Snaptic"><img src="assets/img/tenants/UMKM/Snaptic.png" alt="Snaptic" loading="lazy"></div>
           </div>
@@ -445,7 +445,7 @@
           </div>
           <h3>Kerajinan</h3>
           <p>Produk craft dan karya tangan yang memperkuat nuansa heritage dan pasar rakyat modern</p>
-          <div class="market-card-tenants">
+          <div class="market-card-tenants" data-category="kerajinan">
             <div class="tenant-logo-item" title="Boncel Vera"><img src="assets/img/tenants/Kerajinan/boncel-vera.jpg" alt="Boncel Vera" loading="lazy"></div>
           </div>
         </div>
@@ -467,7 +467,7 @@
           </div>
           <h3>Wellness Community</h3>
           <p>Komunitas dan brand yang bergerak di bidang kebugaran, self-care, dan kesehatan holistik</p>
-          <div class="market-card-tenants">
+          <div class="market-card-tenants" data-category="wellness">
             <div class="tenant-logo-item" title="Segera Hadir">?</div>
           </div>
         </div>
@@ -881,7 +881,25 @@
   </a>
 
   <!-- JavaScript -->
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
+
+  <!-- ============================
+       TENANT MODAL
+       ============================ -->
+  <div class="tenant-modal" id="tenantModal" aria-hidden="true">
+    <div class="tenant-modal-overlay" data-close></div>
+    <div class="tenant-modal-container">
+      <button class="tenant-modal-close" data-close aria-label="Tutup popup">&times;</button>
+      <div class="tenant-modal-header">
+        <h3 class="tenant-modal-title" id="modalTitle">Tenant</h3>
+        <p class="tenant-modal-desc" id="modalDesc"></p>
+      </div>
+      <div class="tenant-modal-grid" id="modalGrid">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
 </body>
 
 </html>

@@ -263,4 +263,109 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==========================================
+  // 10. TENANT MODAL
+  // ==========================================
+  const tenantData = {
+    vegetarian: {
+      title: "Tenant Vegetarian",
+      desc: "Makanan dan minuman berbasis nabati",
+      tenants: [
+        { name: "AR Farm", img: "assets/img/tenants/Vegetarian/ar-farm.jpg" },
+        { name: "Assi Korean Food", img: "assets/img/tenants/Vegetarian/assi-korean-food.jpg" },
+        { name: "Azra Fit Center", img: "assets/img/tenants/Vegetarian/azra-fit-center.jpg" },
+        { name: "Dona Clara", img: "assets/img/tenants/Vegetarian/dona-clara.jpg" },
+        { name: "Bages", img: "assets/img/tenants/Vegetarian/Bages.jpg" },
+        { name: "Choice", img: "assets/img/tenants/Vegetarian/Choice.jpg" },
+        { name: "Damaroti", img: "assets/img/tenants/Vegetarian/Damaroti.jpg" },
+        { name: "Lunetta", img: "assets/img/tenants/Vegetarian/Lunetta.jpg" },
+        { name: "Meichel", img: "assets/img/tenants/Vegetarian/Meichel.jpg" },
+        { name: "Recaff", img: "assets/img/tenants/Vegetarian/Recaff.jpg" },
+        { name: "Francoville", img: "assets/img/tenants/Vegetarian/francovvile-logo-hijau.png" },
+        { name: "Ina Cookies", img: "assets/img/tenants/Vegetarian/ina-cookies.jpg" },
+        { name: "Kampoeng Simo", img: "assets/img/tenants/Vegetarian/kampoeng-simo.jpg" },
+        { name: "LK", img: "assets/img/tenants/Vegetarian/lk-.jpg" },
+        { name: "LN", img: "assets/img/tenants/Vegetarian/ln-.jpg" },
+        { name: "Low Cal", img: "assets/img/tenants/Vegetarian/low-cal.jpg" },
+        { name: "Lun's", img: "assets/img/tenants/Vegetarian/lun-s.jpg" },
+        { name: "Mie Naga Emas", img: "assets/img/tenants/Vegetarian/mie-naga-emas.jpg" },
+        { name: "One Third Cup", img: "assets/img/tenants/Vegetarian/one-third-cup.jpg" },
+        { name: "Pagoda", img: "assets/img/tenants/Vegetarian/pagoda-logo-merah.jpg" }
+      ]
+    },
+    umkm: {
+      title: "Tenant UMKM",
+      desc: "Produk lokal dan kurasi festival",
+      tenants: [
+        { name: "Hime", img: "assets/img/tenants/UMKM/Hime.jpg" },
+        { name: "Snaptic", img: "assets/img/tenants/UMKM/Snaptic.png" }
+      ]
+    },
+    kerajinan: {
+      title: "Tenant Kerajinan",
+      desc: "Produk craft dan karya tangan",
+      tenants: [
+        { name: "Boncel Vera", img: "assets/img/tenants/Kerajinan/boncel-vera.jpg" }
+      ]
+    },
+    pet: {
+      title: "Pet Lovers",
+      desc: "Komunitas dan produk pecinta hewan",
+      tenants: []
+    },
+    wellness: {
+      title: "Wellness Community",
+      desc: "Kebugaran dan kesehatan holistik",
+      tenants: []
+    }
+  };
+
+  const modal = document.getElementById('tenantModal');
+  const modalGrid = document.getElementById('modalGrid');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const closeBtns = document.querySelectorAll('[data-close]');
+  const tenantTriggers = document.querySelectorAll('.market-card-tenants');
+
+  if (modal && modalGrid) {
+    tenantTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const cat = trigger.getAttribute('data-category');
+        if (!cat || !tenantData[cat]) return;
+        
+        const data = tenantData[cat];
+        modalTitle.textContent = data.title;
+        modalDesc.textContent = data.desc;
+        
+        modalGrid.innerHTML = ''; // clear
+        
+        if (data.tenants.length === 0) {
+          modalGrid.innerHTML = '<div class="tenant-item"><div class="tenant-item-logo placeholder">?</div><div class="tenant-item-name">Segera Hadir</div></div>';
+        } else {
+          data.tenants.forEach(t => {
+            const item = document.createElement('div');
+            item.className = 'tenant-item';
+            item.innerHTML = `
+              <div class="tenant-item-logo">
+                <img src="${t.img}" alt="${t.name}" loading="lazy">
+              </div>
+              <div class="tenant-item-name">${t.name}</div>
+            `;
+            modalGrid.appendChild(item);
+          });
+        }
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent scrolling background
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
 });

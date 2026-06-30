@@ -247,14 +247,17 @@
 .sponsor-logo--sapindo img,
 .sponsor-logo--dharma-budaya img,
 .sponsor-logo--keivan-bros img,
-.sponsor-logo--pas-padel img {
+.sponsor-logo--pas-padel img,
+.sponsor-logo--ascent-premiere img,
+.sponsor-logo--browye-dveggie img {
   max-height: 112px;
   filter: grayscale(8%);
   opacity: 0.92;
 }
 
 .sponsor-logo--jiu-jiu img,
-.sponsor-logo--nikmat-rasa img {
+.sponsor-logo--nikmat-rasa img,
+.sponsor-logo--gudanggo img {
   max-height: 84px;
   filter: grayscale(8%);
   opacity: 0.92;
@@ -389,12 +392,15 @@
   .sponsor-logo--pagoda img,
   .sponsor-logo--dharma-budaya img,
   .sponsor-logo--keivan-bros img,
-  .sponsor-logo--pas-padel img {
+  .sponsor-logo--pas-padel img,
+  .sponsor-logo--ascent-premiere img,
+  .sponsor-logo--browye-dveggie img {
     max-height: 48px;
   }
 
   .sponsor-logo--jiu-jiu img,
-  .sponsor-logo--nikmat-rasa img {
+  .sponsor-logo--nikmat-rasa img,
+  .sponsor-logo--gudanggo img {
     max-height: 38px;
   }
 
@@ -483,12 +489,15 @@
   .sponsor-logo--pagoda img,
   .sponsor-logo--dharma-budaya img,
   .sponsor-logo--keivan-bros img,
-  .sponsor-logo--pas-padel img {
+  .sponsor-logo--pas-padel img,
+  .sponsor-logo--ascent-premiere img,
+  .sponsor-logo--browye-dveggie img {
     max-height: 38px;
   }
 
   .sponsor-logo--jiu-jiu img,
-  .sponsor-logo--nikmat-rasa img {
+  .sponsor-logo--nikmat-rasa img,
+  .sponsor-logo--gudanggo img {
     max-height: 30px;
   }
 }

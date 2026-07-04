@@ -107,6 +107,26 @@
   margin-bottom: 16px;
 }
 
+.tenant-badge-closed {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(196, 114, 74, 0.15), rgba(196, 114, 74, 0.08));
+  color: var(--terracotta);
+  font-family: var(--font-sub);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(196, 114, 74, 0.25);
+  margin-bottom: 16px;
+}
+
+.tenant-badge-closed .tenant-badge-dot {
+  background: var(--terracotta);
+}
+
 .tenant-badge-dot {
   width: 8px;
   height: 8px;

@@ -30,3 +30,6 @@ npm-debug.log
 
 # Log files
 *.log
+
+# MIRO video production (local only)
+miro/

@@ -286,6 +286,33 @@
   gap: 16px;
 }
 
+.event-complete-label {
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  max-width: 560px;
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(20, 49, 39, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.event-complete-label strong {
+  color: var(--gold-accent);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+.event-complete-label small {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .countdown-item {
   display: flex;
   flex-direction: column;
@@ -326,6 +353,13 @@
   }
   .badge-separator {
     display: none;
+  }
+  .event-complete-label {
+    width: min(100%, 340px);
+    padding: 14px 16px;
+  }
+  .event-complete-label strong {
+    font-size: 1.2rem;
   }
   .countdown-item {
     padding: 12px 14px;

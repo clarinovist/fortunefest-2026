@@ -58,43 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================
-  // 2. COUNTDOWN TIMER (Aug 16, 2026)
-  // ==========================================
-  const eventDate = new Date("Aug 16, 2026 06:00:00").getTime();
-  
-  const daysEl = document.getElementById('cd-days');
-  const hoursEl = document.getElementById('cd-hours');
-  const minsEl = document.getElementById('cd-minutes');
-  const secsEl = document.getElementById('cd-seconds');
-  
-  if (daysEl && hoursEl && minsEl) {
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
-      
-      if (distance < 0) {
-        clearInterval(countdownInterval);
-        return;
-      }
-      
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-      daysEl.textContent = days.toString().padStart(2, '0');
-      hoursEl.textContent = hours.toString().padStart(2, '0');
-      minsEl.textContent = minutes.toString().padStart(2, '0');
-      if (secsEl) secsEl.textContent = seconds.toString().padStart(2, '0');
-    };
-    
-    // Initial call
-    updateCountdown();
-    // Update every second
-    const countdownInterval = setInterval(updateCountdown, 1000);
-  }
-  
+
   // ==========================================
   // 3. AMBIENT PARTICLES HERO
   // ==========================================
